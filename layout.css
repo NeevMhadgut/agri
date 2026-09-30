@@ -1,0 +1,87 @@
+/* =========================================================
+   layout.css - Multi-Column Page Layout
+   Task 9 Requirements:
+   - Header at top
+   - Sidebar to left
+   - Content to right
+   - Footer at bottom
+   - Use: float or flex
+   - Set widths and spacing
+   ========================================================= */
+
+.site-wrapper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Page Header */
+.layout-header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Two-column Container with Flexbox */
+.layout-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+/* Sidebar to Left (approx 28% width) */
+.layout-sidebar {
+  flex: 0 0 280px;
+  width: 280px;
+}
+
+/* Content to Right (flexible remaining width) */
+.layout-content {
+  flex: 1;
+  min-width: 0; /* Prevents overflow issues */
+}
+
+/* Alternative Float-based structure for compatibility demonstration */
+.float-layout-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float-sidebar {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.float-content {
+  float: right;
+  width: 73%;
+  box-sizing: border-box;
+}
+
+/* Footer at Bottom */
+.layout-footer {
+  width: 100%;
+  clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 860px) {
+  .layout-container {
+    flex-direction: column;
+  }
+  .layout-sidebar {
+    width: 100%;
+    flex: auto;
+  }
+  .layout-content {
+    width: 100%;
+  }
+  .float-sidebar, .float-content {
+    float: none;
+    width: 100%;
+  }
+}

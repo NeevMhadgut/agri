@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart JS Advisory Engine - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="form.css">
+  <style>
+    .js-panel {
+      background: #ffffff;
+      border: 1px solid #d8ddd4;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .js-panel h3 {
+      color: #1b4332;
+      border-bottom: 2px solid #e2ebd8;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link active" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="simple-card">
+        <p class="subtitle" style="font-size: 1.3rem;">JavaScript Programming & Advisory Engine (Experiment 5)</p>
+        <p class="tagline">Interactive execution of variables, operators, decision rules, objects, arrays, and telemetry data processing.</p>
+      </div>
+
+      <!-- Task 1: Soil Moisture Deficit Calculator -->
+      <section class="js-panel">
+        <h3>Task 1: Soil Moisture Deficit & Water Requirement Program</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Calculates moisture deficit between current telemetry and crop-specific field capacity. Triggers <code>alert()</code> and writes result to DOM.</p>
+        <div class="grid-2col">
+          <div class="form-group">
+            <label for="calcFarmerName">Farmer Name:</label>
+            <input type="text" id="calcFarmerName" value="Pranav Mendon">
+          </div>
+          <div class="form-group">
+            <label for="calcPlotId">Plot ID:</label>
+            <input type="text" id="calcPlotId" value="AGR-1024">
+          </div>
+          <div class="form-group">
+            <label for="calcCurrentMoisture">Current Soil Moisture (%):</label>
+            <input type="number" id="calcCurrentMoisture" value="22" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="calcRequiredMoisture">Required Field Capacity (%):</label>
+            <input type="number" id="calcRequiredMoisture" value="45" step="0.1">
+          </div>
+        </div>
+        <button id="btnCalcMoisture" class="btn btn-submit">Calculate Water Deficit (alert & display)</button>
+        <div id="calcMoistureOutput" style="margin-top: 1rem;"></div>
+      </section>
+
+      <!-- Task 2: Rule-Based Recommendation Engine -->
+      <section class="js-panel">
+        <h3>Task 2: Decision Rule Recommendation Engine</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Evaluates multi-variable agronomic rules (Moisture &lt; 30%, 30%-50%, &gt; 50%, and rainfall forecast).</p>
+        <div class="grid-2col">
+          <div class="form-group">
+            <label for="ruleSoilMoisture">Plot Soil Moisture (%):</label>
+            <input type="number" id="ruleSoilMoisture" value="28">
+          </div>
+          <div class="form-group">
+            <label for="ruleRainForecast">Rain Expected in Next 24h?:</label>
+            <select id="ruleRainForecast">
+              <option value="no">No Rain Forecasted (Clear)</option>
+              <option value="yes">Rain Expected / High Probability</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ruleCropStage">Sugarcane Crop Stage:</label>
+            <select id="ruleCropStage">
+              <option value="Tillering">Tillering Stage</option>
+              <option value="Grand Growth">Grand Growth Stage</option>
+              <option value="Ripening">Ripening Stage</option>
+            </select>
+          </div>
+        </div>
+        <button id="btnEvalRules" class="btn btn-submit">Evaluate Decision Rules</button>
+        <div id="ruleOutput"></div>
+      </section>
+
+      <!-- Task 3: JavaScript Farm Object -->
+      <section class="js-panel">
+        <h3>Task 3: Object-Oriented JavaScript &mdash; Sugarcane Farm Object</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Encapsulates farm attributes (farmerName, plotId, cropStage, soilMoisture, area, pumpStatus) with a member method <code>displayFarmInfo()</code>.</p>
+        <button id="btnFarmObject" class="btn btn-submit">Instantiate & Display Farm Object</button>
+        <div id="farmObjectOutput" style="margin-top: 1rem;"></div>
+      </section>
+
+      <!-- Task 4: Hourly Sensor Array Analysis -->
+      <section class="js-panel">
+        <h3>Task 4: Hourly Moisture Sensor Telemetry Array Processing</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Processes an array of 24 hourly sensor readings: displays all readings, determines minimum, maximum, computes average, and counts readings below critical threshold (&lt;30%).</p>
+        <button id="btnAnalyzeSensors" class="btn btn-submit">Run 24-Hour Telemetry Array Analysis</button>
+        <div id="sensorArrayOutput" style="margin-top: 1rem;"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

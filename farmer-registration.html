@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Registration - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link active" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="form-card">
+        <p class="subtitle" style="font-size: 1.25rem; margin-bottom: 0.25rem;">Farmer Registration & Plot Onboarding</p>
+        <p class="tagline">Register your sugarcane farm to activate automated AI irrigation alerts and telemetry telemetry tracking.</p>
+
+        <!-- Success Notification Box -->
+        <div id="formSuccessMsg" class="alert-success" role="alert"></div>
+
+        <form id="farmerRegistrationForm" class="agri-form" novalidate>
+          
+          <!-- Fieldset 1: Farmer Personal & Contact Information -->
+          <fieldset>
+            <legend>Personal & Contact Details</legend>
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label for="farmerName">Farmer Name <span class="required-star">*</span></label>
+                <input type="text" id="farmerName" name="farmerName" placeholder="e.g. Ramesh Patil">
+                <span class="error-msg" id="farmerNameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mobileNumber">Mobile Number <span class="required-star">*</span></label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="10-digit mobile number">
+                <span class="error-msg" id="mobileNumberError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="email" name="email" placeholder="e.g. farmer@example.com">
+                <span class="error-msg" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="village">Village / Taluka <span class="required-star">*</span></label>
+                <input type="text" id="village" name="village" placeholder="e.g. Baramati">
+                <span class="error-msg" id="villageError"></span>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 2: Farm & Soil Specifics -->
+          <fieldset>
+            <legend>Farm & Agronomic Details</legend>
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="plotId">Plot ID (Format: AGR-1234) <span class="required-star">*</span></label>
+                <input type="text" id="plotId" name="plotId" placeholder="e.g. AGR-1045">
+                <span class="error-msg" id="plotIdError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cropStage">Crop Stage <span class="required-star">*</span></label>
+                <select id="cropStage" name="cropStage">
+                  <option value="">-- Select Crop Stage --</option>
+                  <option value="Germination">Germination (0-30 Days)</option>
+                  <option value="Tillering">Tillering (31-120 Days)</option>
+                  <option value="Grand Growth">Grand Growth (121-250 Days)</option>
+                  <option value="Ripening">Ripening / Maturity (251-360 Days)</option>
+                </select>
+                <span class="error-msg" id="cropStageError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="soilType">Soil Type <span class="required-star">*</span></label>
+                <select id="soilType" name="soilType">
+                  <option value="">-- Select Soil Type --</option>
+                  <option value="Black Clay (Regur)">Black Clay (Regur)</option>
+                  <option value="Alluvial Loam">Alluvial Loam</option>
+                  <option value="Sandy Loam">Sandy Loam</option>
+                  <option value="Red Laterite">Red Laterite</option>
+                </select>
+                <span class="error-msg" id="soilTypeError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="irrigationMethod">Irrigation Method <span class="required-star">*</span></label>
+                <select id="irrigationMethod" name="irrigationMethod">
+                  <option value="">-- Select Irrigation Method --</option>
+                  <option value="Drip">Drip Irrigation (Recommended)</option>
+                  <option value="Sprinkler">Micro-Sprinkler</option>
+                  <option value="Furrow">Furrow Irrigation</option>
+                  <option value="Flood">Flood / Basin</option>
+                </select>
+                <span class="error-msg" id="irrigationMethodError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="soilMoisture">Initial Soil Moisture (%) <span class="required-star">*</span></label>
+                <input type="number" id="soilMoisture" name="soilMoisture" min="0" max="100" step="0.1" placeholder="e.g. 28.5">
+                <span class="error-msg" id="soilMoistureError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="registrationDate">Registration Date <span class="required-star">*</span></label>
+                <input type="date" id="registrationDate" name="registrationDate">
+                <span class="error-msg" id="registrationDateError"></span>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="farmPhoto">Farm / Crop Plot Photo (Optional)</label>
+                <input type="file" id="farmPhoto" name="farmPhoto" accept="image/*">
+                <span class="error-msg" id="farmPhotoError"></span>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- Fieldset 3: Preferences -->
+          <fieldset>
+            <legend>Preferences & Communication</legend>
+            <div style="margin-bottom: 1rem;">
+              <label style="font-weight: 600; display: block; margin-bottom: 0.35rem;">Preferred Advisory Language:</label>
+              <div class="options-row">
+                <label class="option-label"><input type="radio" name="preferredLanguage" value="Marathi" checked> Marathi (मराठी)</label>
+                <label class="option-label"><input type="radio" name="preferredLanguage" value="Hindi"> Hindi (हिंदी)</label>
+                <label class="option-label"><input type="radio" name="preferredLanguage" value="English"> English</label>
+              </div>
+            </div>
+
+            <div>
+              <label style="font-weight: 600; display: block; margin-bottom: 0.35rem;">Advisory Services Required:</label>
+              <div class="options-row">
+                <label class="option-label"><input type="checkbox" name="services" value="irrigation" checked> Daily Irrigation Timing</label>
+                <label class="option-label"><input type="checkbox" name="services" value="weather" checked> Weather & Rainfall Forecasts</label>
+                <label class="option-label"><input type="checkbox" name="services" value="soil"> Soil Nutrient & Health Reports</label>
+                <label class="option-label"><input type="checkbox" name="services" value="crop"> Harvest Timing Recommendations</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Form Buttons -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit">Submit Registration</button>
+            <button type="reset" class="btn btn-reset">Reset Form</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media and Awareness - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <style>
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .media-box {
+      width: 100%;
+      border: 1px solid #d8ddd4;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f8faf6;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    video, audio, iframe {
+      width: 100%;
+      display: block;
+    }
+    video {
+      max-height: 280px;
+      background: #000;
+    }
+    iframe {
+      min-height: 280px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link active" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="simple-card">
+        <p class="subtitle">Agricultural Multimedia & Awareness Hub</p>
+        <p class="tagline">Educational videos, water conservation audio broadcasts, and georeferenced satellite mapping.</p>
+
+        <div class="media-grid">
+          <!-- Video Awareness -->
+          <div class="simple-card" style="margin-bottom: 0;">
+            <h3>Irrigation Awareness Video</h3>
+            <p style="font-size: 0.88rem; color: #516151;">Visual guide on drip lateral emitter flushing and filtration maintenance:</p>
+            <div class="media-box">
+              <video controls poster="./images/sugarcane.jpg">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Audio Advisory -->
+          <div class="simple-card" style="margin-bottom: 0;">
+            <h3>Water Conservation Audio Advisory</h3>
+            <p style="font-size: 0.88rem; color: #516151;">Agronomy audio advisory for evening cane irrigation techniques:</p>
+            <div class="media-box" style="padding: 1rem; background: #eef6ee;">
+              <audio controls style="width: 100%;">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embedded GIS / OpenStreetMap Map -->
+        <div class="simple-card" style="margin-top: 1.5rem;">
+          <h3>Regional Sugarcane Farm Cluster Map</h3>
+          <p style="font-size: 0.88rem; color: #516151;">Interactive embedded OpenStreetMap locating pilot IoT sensor clusters:</p>
+          <div class="media-box">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=74.15%2C16.65%2C74.35%2C16.85&layer=mapnik"
+              title="Embedded regional farm cluster map"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <noscript>
+          <div style="background-color: #ffe3e3; border: 1px solid #d90429; color: #b7094c; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+            <strong>Notice:</strong> JavaScript is currently disabled in your browser. Multimedia content remains functional, but live sensor alerts and interactive calculators may require JavaScript to be enabled.
+          </div>
+        </noscript>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+</body>
+</html>

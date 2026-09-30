@@ -1,0 +1,95 @@
+/* =========================================================
+   table.css - Table Styling for Advisory & Price Lists
+   Task 7 Requirements:
+   - Collapse borders
+   - Add header background color
+   - Zebra-striping rows
+   - Center align text
+   - Use: border-collapse, nth-child(even)
+   ========================================================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #d8ddd4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  text-align: center; /* Center align text */
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.data-table caption {
+  caption-side: top;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1b4332;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: #e8f5e9;
+  border-bottom: 2px solid #a7f3d0;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #d8ddd4;
+  padding: 0.75rem 0.85rem;
+  vertical-align: middle;
+}
+
+/* Header Background Color */
+.data-table thead th {
+  background-color: #2d6a4f;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Zebra-striping Rows */
+.data-table tbody tr:nth-child(even) {
+  background-color: #f7faf7; /* Zebra striping with nth-child(even) */
+}
+
+.data-table tbody tr:hover {
+  background-color: #eef6ee;
+}
+
+/* Status cell styling */
+.status-pill {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-approved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-monitor {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-hold {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Table Footer */
+.data-table tfoot td {
+  background-color: #f1f5f1;
+  font-style: italic;
+  color: #4b5563;
+  padding: 0.75rem 1rem;
+}

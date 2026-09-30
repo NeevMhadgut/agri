@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Information and Sensors - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link active" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Ordered List: Workflow -->
+      <section class="simple-card">
+        <p class="subtitle">Irrigation Advisory Workflow</p>
+        <p>Step-by-step process of telemetry acquisition and AI decision formulation:</p>
+        <ol style="line-height: 1.8;">
+          <li>Collect farm profile and sugarcane crop stage details.</li>
+          <li>Read telemetry from IoT soil moisture sensors and micro-weather stations.</li>
+          <li>Analyze soil moisture deficit against crop evapotranspiration coefficients.</li>
+          <li>Generate plot-specific irrigation dosage and run-time recommendations.</li>
+          <li>Share actionable advisory notifications with farmers and field officers.</li>
+        </ol>
+      </section>
+
+      <!-- Unordered List: Data Sources -->
+      <section class="simple-card">
+        <p class="subtitle">Data Sources</p>
+        <ul style="line-height: 1.8;">
+          <li>Soil Moisture Sensors (Capacitive FDR probes at 15cm and 30cm)</li>
+          <li>Weather Forecast (Temperature, humidity, wind velocity, and rainfall probability)</li>
+          <li>Satellite Images (Sentinel-2 NDVI vegetation health indicators)</li>
+          <li>Crop Information (Sugarcane variety, phenological growth stage, and root depth)</li>
+          <li>Soil Reports (Texture, organic carbon percentage, and field water retention capacity)</li>
+          <li>IoT Devices (LoRaWAN gateways, automated solenoid valves, and pressure transducers)</li>
+        </ul>
+      </section>
+
+      <!-- Nested List: Stakeholders & Responsibilities -->
+      <section class="simple-card">
+        <p class="subtitle">Stakeholders and Responsibilities</p>
+        <ul style="line-height: 1.8;">
+          <li><strong>Farmer</strong>
+            <ul>
+              <li>Checks daily crop water needs on the web portal.</li>
+              <li>Follows precise drip irrigation duration advice.</li>
+            </ul>
+          </li>
+          <li><strong>Agricultural Officer</strong>
+            <ul>
+              <li>Reviews field sensor calibration and telemetry reports.</li>
+              <li>Confirms and approves automated advisory alerts before dissemination.</li>
+            </ul>
+          </li>
+          <li><strong>Researcher</strong>
+            <ul>
+              <li>Studies seasonal sugarcane evapotranspiration and aquifer depletion patterns.</li>
+              <li>Improves and retrains advisory decision algorithms.</li>
+            </ul>
+          </li>
+          <li><strong>Sugar Factory Management</strong>
+            <ul>
+              <li>Monitors regional crop maturity and cane harvest scheduling.</li>
+              <li>Supports large-scale canal and community drip irrigation logistics.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Description List: Abbreviations -->
+      <section class="simple-card">
+        <p class="subtitle">Agricultural & Technical Abbreviations</p>
+        <dl style="line-height: 1.9;">
+          <dt style="font-weight: bold; color: #1b4332;">AI</dt>
+          <dd style="margin-left: 1.5rem; margin-bottom: 0.5rem;">Artificial Intelligence &mdash; Computational models simulating agricultural decision-making.</dd>
+          <dt style="font-weight: bold; color: #1b4332;">IoT</dt>
+          <dd style="margin-left: 1.5rem; margin-bottom: 0.5rem;">Internet of Things &mdash; Network of physical sensor nodes collecting telemetry in real-time.</dd>
+          <dt style="font-weight: bold; color: #1b4332;">GIS</dt>
+          <dd style="margin-left: 1.5rem; margin-bottom: 0.5rem;">Geographic Information System &mdash; Framework for capturing and analyzing spatial farm data.</dd>
+          <dt style="font-weight: bold; color: #1b4332;">GPS</dt>
+          <dd style="margin-left: 1.5rem; margin-bottom: 0.5rem;">Global Positioning System &mdash; Satellite navigation system providing exact plot boundary geofences.</dd>
+          <dt style="font-weight: bold; color: #1b4332;">ET</dt>
+          <dd style="margin-left: 1.5rem; margin-bottom: 0.5rem;">Evapotranspiration &mdash; Sum of evaporation from soil and transpiration from sugarcane crop leaves.</dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+</body>
+</html>

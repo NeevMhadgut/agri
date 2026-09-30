@@ -1,0 +1,73 @@
+/* =========================================================
+   nav.css - Navigation Menu Styling
+   Task 2 Requirements:
+   - Remove bullet points
+   - Display menu items horizontally
+   - Add hover effect
+   - Change link colors
+   - Use: :hover, text-decoration, display: inline-block
+   ========================================================= */
+
+.site-nav {
+  background-color: #2d6a4f;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.nav-menu {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: inline-block; /* Display menu items horizontally */
+  margin: 0;
+}
+
+.nav-link {
+  display: inline-block; /* Display inline-block */
+  padding: 0.55rem 1rem;
+  color: #f0fff4; /* Link colors */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #1b4332;
+  color: #95d5b2;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active {
+  background-color: #1b4332;
+  color: #ffffff;
+  border-bottom: 3px solid #74c69d;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-item {
+    display: block;
+    width: 100%;
+  }
+  .nav-link {
+    display: block;
+    text-align: center;
+  }
+}

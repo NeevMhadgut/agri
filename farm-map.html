@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Location Map - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link active" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="simple-card">
+        <p class="subtitle">Interactive Farm Location Map</p>
+        <p class="tagline">Click on any plot region on the map image below to view its specific crop and irrigation note in the advisory page.</p>
+
+        <div style="text-align: center; margin: 1.5rem 0;">
+          <!-- Real farm map image with client-side image map -->
+          <img
+            src="./images/farm_map.jpg"
+            alt="Real geofenced farm map of Sugarcane plots"
+            usemap="#farmMap"
+            width="600"
+            height="400"
+            style="max-width: 100%; height: auto; border: 2px solid #2d6a4f; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
+          >
+          <map name="farmMap">
+            <area shape="rect" coords="20,20,280,180" href="irrigation-advisory.html#plot-a" alt="Plot A irrigation note" title="Click to view Plot A Advisory">
+            <area shape="rect" coords="300,20,580,180" href="irrigation-advisory.html#plot-b" alt="Plot B irrigation note" title="Click to view Plot B Advisory">
+            <area shape="rect" coords="20,200,580,380" href="irrigation-advisory.html#plot-c" alt="Plot C irrigation note" title="Click to view Plot C Advisory">
+          </map>
+        </div>
+      </section>
+
+      <section class="simple-card">
+        <h2>Plot Guide & Region Legend</h2>
+        <ul>
+          <li><strong>Plot A (Top-Left Zone):</strong> Sugarcane germination zone with steady micro-irrigation needs.</li>
+          <li><strong>Plot B (Top-Right Zone):</strong> Young vegetative canopy section with light watering and moisture retention checks.</li>
+          <li><strong>Plot C (Lower Grand-Growth Block):</strong> Heavy water demand zone with early-morning deep-drip irrigation.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-based Smart Irrigation Advisory System for Sugarcane Crop (KJS-AGR-01)">
+  <title>Smart Irrigation Advisory System</title>
+
+  <!-- Task 3: External CSS for Whole Website Theme -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="table.css">
+
+  <!-- Task 2: Internal CSS for Navigation Menu -->
+  <style>
+    /* Task 2: Internal CSS (<style> in <head>) */
+    nav.internal-nav {
+      background-color: #2d6a4f;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    nav.internal-nav ul {
+      list-style-type: none; /* Remove bullet points */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    nav.internal-nav li {
+      display: inline-block; /* Display menu items horizontally */
+    }
+    nav.internal-nav a {
+      display: inline-block; /* Use: display: inline-block */
+      color: #ffffff;        /* Change link colors */
+      text-decoration: none; /* text-decoration */
+      padding: 0.5rem 0.9rem;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.25s, color 0.25s;
+    }
+    nav.internal-nav a:hover { /* Use: :hover */
+      background-color: #1b4332;
+      color: #74c69d;
+      text-decoration: underline;
+    }
+    nav.internal-nav a.active {
+      background-color: #1b4332;
+      border-bottom: 3px solid #52b788;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <!-- Task 1: Style the Homepage Header (Inline CSS) -->
+    <!-- Inline CSS applied to <header>, <h1>, and <p> -->
+    <header class="layout-header" style="background-color: #1b4332; padding: 1.5rem; border: 3px solid #2d6a4f; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 1.5rem;">
+      <p class="org-name" style="color: #d8f3dc; font-size: 0.95rem; font-weight: bold; letter-spacing: 0.08em; margin: 0 0 0.5rem 0; display: flex; align-items: center;">
+        <img class="logo" src="./images/image.png" alt="org logo" style="width: 44px; height: 44px; margin-right: 12px; border-radius: 50%;">
+        Agricultural Advisory Council &bull; K. J. Somaiya Smart Farming
+      </p>
+      <h1 class="page-name" style="color: #ffffff; font-size: 2.1rem; margin: 0 0 0.5rem 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+        Smart Irrigation Advisory System
+      </h1>
+      <!-- Center align slogan with inline CSS -->
+      <p style="color: #b7e4c7; text-align: center; font-size: 1.1rem; font-style: italic; margin: 0.5rem 0 0 0; padding: 0.5rem; border-top: 1px dashed #40916c;">
+        "Empowering sugarcane farmers with precision AI water intelligence, sensor analytics, and sustainable yields."
+      </p>
+    </header>
+
+    <!-- Task 2: Navigation Menu styled with internal CSS -->
+    <nav class="internal-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li><a href="about-system.html">About System</a></li>
+        <li><a href="farm-information.html">Farm Information</a></li>
+        <li><a href="farm-map.html">Interactive Map</a></li>
+        <li><a href="recommendation.html">Recommendations</a></li>
+        <li><a href="registration.html">Farmer Registration</a></li>
+        <li><a href="media.html">Media & Awareness</a></li>
+        <li><a href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <!-- Task 10: CSS Effects & Highlighting: Offer / Advisory Alert Box -->
+    <section class="offer-box" id="special-advisory-offer">
+      <h3>Special Monsoon Water-Saving Advisory!</h3>
+      <p>Rain is predicted across South Maharashtra plots in the next 36 hours. Drip automation pumps can be paused to save up to 40% water.</p>
+    </section>
+
+    <!-- Task 9: Page Layout Using CSS (Sidebar to Left, Content to Right) -->
+    <div class="layout-container">
+      
+      <!-- Left Sidebar (Task 4: Style Book / Crop Categories Sidebar) -->
+      <aside class="layout-sidebar">
+        <div class="category-sidebar">
+          <h2 style="font-size: 1.15rem; margin-top: 0; color: #1b4332;">Crop & Advisory Zones</h2>
+          <p style="font-size: 0.85rem; color: #516151;">Browse irrigation guidelines tailored by zone and growth stage:</p>
+          <ul class="category-list">
+            <li><a href="irrigation-advisory.html#plot-a">Sugarcane - Germination Zone</a></li>
+            <li><a href="irrigation-advisory.html#plot-b">Sugarcane - Tillering Stage</a></li>
+            <li><a href="irrigation-advisory.html#plot-c">Sugarcane - Grand Growth Block</a></li>
+            <li><a href="recommendation.html">Drip Scheduling Models</a></li>
+            <li><a href="farm-map.html">Geofenced IoT Sensor Zones</a></li>
+            <li><a href="smart-advisory.html">Real-Time Moisture Deficit Tool</a></li>
+          </ul>
+        </div>
+
+        <div class="simple-card" style="margin-top: 1.5rem;">
+          <h3 style="font-size: 1rem; color: #1b4332;">System Profile</h3>
+          <p style="font-size: 0.88rem; margin-bottom: 0.4rem;"><strong>Crop Code:</strong> KJS-AGR-01</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.4rem;"><strong>Season:</strong> Kharif 2026</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0.4rem;"><strong>Target Crop:</strong> Sugarcane (Co 86032)</p>
+          <p style="font-size: 0.88rem; margin-bottom: 0;"><strong>Active Sensors:</strong> 24 Connected</p>
+        </div>
+      </aside>
+
+      <!-- Main Content to Right -->
+      <main class="layout-content">
+        <!-- Hero Card -->
+        <article class="simple-card" id="home-hero">
+          <p class="subtitle" title="Kharif crop season monitoring advisory">Current Crop Season: Kharif 2026</p>
+          <p class="tagline">AI-based smart irrigation advisory for farmers, agronomists, and agricultural staff.</p>
+          <p>
+            Welcome to the AI-Based Smart Irrigation Advisory Portal. This platform integrates continuous IoT soil-moisture sensor telemetry, local weather forecasts, and agronomic evapotranspiration models to deliver actionable water volume and scheduling advisories to farmers.
+          </p>
+        </article>
+
+        <!-- Task 5: Book / Advisory Card Layout Using CSS Box Model -->
+        <section>
+          <h2>Featured Irrigation Advisories</h2>
+          <div class="card-grid">
+            <div class="advisory-card">
+              <span class="badge urgent">Immediate Action</span>
+              <h3>Plot A - Cane Early Tillering</h3>
+              <p style="font-size: 0.9rem; color: #495057;">Current Moisture: <strong>24%</strong> (Below threshold of 30%). Drip run recommended for 45 mins.</p>
+              <a href="recommendation.html" style="font-weight: 600; color: #2d6a4f;">View Plot Details &rarr;</a>
+            </div>
+
+            <div class="advisory-card">
+              <span class="badge monitor">Monitoring</span>
+              <h3>Plot B - Vegetative Stage</h3>
+              <p style="font-size: 0.9rem; color: #495057;">Current Moisture: <strong>38%</strong>. Forecast predicts overcast conditions. No irrigation required today.</p>
+              <a href="recommendation.html" style="font-weight: 600; color: #2d6a4f;">View Plot Details &rarr;</a>
+            </div>
+
+            <div class="advisory-card">
+              <span class="badge">Optimal</span>
+              <h3>Plot C - Ripening Cane</h3>
+              <p style="font-size: 0.9rem; color: #495057;">Current Moisture: <strong>55%</strong>. Field capacity is healthy. Drip line pressure test complete.</p>
+              <a href="recommendation.html" style="font-weight: 600; color: #2d6a4f;">View Plot Details &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task 6: Image Gallery Styling with CSS (Hover Zoom & Grid) -->
+        <section class="simple-card">
+          <h2>Precision Agriculture Image Gallery</h2>
+          <p style="font-size: 0.9rem; color: #516151;">Hover over any image to see dynamic scale transformation effects:</p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="./images/sugarcane.jpg" alt="Sugarcane Plot A">
+              <div class="gallery-caption">Sugarcane Field Plot A</div>
+            </div>
+            <div class="gallery-item">
+              <img src="./images/drip.jpg" alt="Smart Drip Irrigation Unit">
+              <div class="gallery-caption">Automated Micro-Drip</div>
+            </div>
+            <div class="gallery-item">
+              <img src="./images/sensor.jpg" alt="IoT Soil Moisture Sensor">
+              <div class="gallery-caption">IoT Capacitive Sensor</div>
+            </div>
+            <div class="gallery-item">
+              <img src="./images/weather.jpg" alt="Agri Weather Station">
+              <div class="gallery-caption">Micro-Weather Telemetry</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Task 7: Table Styling Demonstration -->
+        <section class="simple-card">
+          <h2>Daily Irrigation Schedule & Water Quotas</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <caption>Daily Plot Irrigation Allocation Matrix</caption>
+              <thead>
+                <tr>
+                  <th>Plot ID</th>
+                  <th>Farmer Name</th>
+                  <th>Crop Stage</th>
+                  <th>Soil Moisture</th>
+                  <th>Duration</th>
+                  <th>Recommendation Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AGR-101</td>
+                  <td>Ravi Patil</td>
+                  <td>Vegetative</td>
+                  <td>28%</td>
+                  <td>35 min</td>
+                  <td><span class="status-pill status-hold">Approved</span></td>
+                </tr>
+                <tr>
+                  <td>AGR-102</td>
+                  <td>Anita Deshmukh</td>
+                  <td>Tillering</td>
+                  <td>34%</td>
+                  <td>20 min</td>
+                  <td><span class="status-pill status-monitor">Hold</span></td>
+                </tr>
+                <tr>
+                  <td>AGR-103</td>
+                  <td>Sunil Rao</td>
+                  <td>Grand Growth</td>
+                  <td>26%</td>
+                  <td>45 min</td>
+                  <td><span class="status-pill status-approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td>AGR-104</td>
+                  <td>Meera Jadhav</td>
+                  <td>Ripening</td>
+                  <td>54%</td>
+                  <td>0 min</td>
+                  <td><span class="status-pill status-approved">Sufficient</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="6">Data refreshed every 60 minutes via Somaiya IoT Farm Station Node.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- Task 3: Common Footer Style -->
+    <footer class="site-footer layout-footer">
+      <p><strong>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</strong></p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering, Mumbai-77</p>
+      <p>Academic Year 2026-27 &bull; Student: Pranav Mendon (Roll No: 16010125138, Batch B-3)</p>
+      <p><a href="navigation.html">Site Navigation Sitemap</a> | <a href="registration.html">Farmer Registration Portal</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

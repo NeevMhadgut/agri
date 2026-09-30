@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irrigation Recommendation - Smart Irrigation Advisory System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="simple-card" id="home-header">
+      <p class="org-name">
+        <img class="logo" src="./images/image.png" alt="org logo">
+        Agricultural Advisory Organization
+      </p>
+      <h1 class="page-name">Smart Irrigation Advisory System</h1>
+    </header>
+
+    <nav class="site-nav" aria-label="Main Navigation">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="irrigation-advisory.html">Irrigation Advisory</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-system.html">About System</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-information.html">Farm Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="farm-map.html">Interactive Map</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recommendation.html">Recommendations</a></li>
+        <li class="nav-item"><a class="nav-link" href="registration.html">Farmer Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media & Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="smart-advisory.html">Smart JS Engine</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="simple-card">
+        <p class="subtitle">Plot-wise Irrigation Recommendations</p>
+        <p>The following schedule represents automated AI telemetry decisions synchronized with soil sensors and weather radar:</p>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <caption>Irrigation recommendation table for current farm plots</caption>
+            <thead>
+              <tr>
+                <th>Plot ID</th>
+                <th>Farmer Name</th>
+                <th>Crop Stage</th>
+                <th>Soil Moisture (%)</th>
+                <th>Recommended Irrigation Date</th>
+                <th>Irrigation Duration</th>
+                <th>Weather Forecast</th>
+                <th>Recommendation Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2" style="font-weight: 700; background-color: #f0f7f0;">Plot A</td>
+                <td>Ravi Patil</td>
+                <td>Vegetative</td>
+                <td>28%</td>
+                <td>30 Jul 2026</td>
+                <td>35 min</td>
+                <td>Dry</td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+              </tr>
+              <tr>
+                <td>Ravi Patil</td>
+                <td colspan="2" style="font-style: italic; background-color: #fbfbf6;">Young crop with low moisture threshold</td>
+                <td>31 Jul 2026</td>
+                <td>25 min</td>
+                <td>Partly cloudy</td>
+                <td><span class="status-pill status-monitor">Monitor</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; background-color: #f0f7f0;">Plot B</td>
+                <td>Anita Deshmukh</td>
+                <td>Flowering</td>
+                <td>34%</td>
+                <td>30 Jul 2026</td>
+                <td>20 min</td>
+                <td>Possible rain</td>
+                <td><span class="status-pill status-hold">Hold</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; background-color: #f0f7f0;">Plot C</td>
+                <td>Sunil Rao</td>
+                <td>Ripening</td>
+                <td>30%</td>
+                <td>31 Jul 2026</td>
+                <td>30 min</td>
+                <td>Clear</td>
+                <td><span class="status-pill status-approved">Approved</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="8">Footer note: Recommendations are sample advisory values and should be confirmed by field agronomists.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Smart Irrigation Advisory System &bull; Sugarcane Crop (KJS-AGR-01)</p>
+      <p>Department of Computer Engineering &bull; K. J. Somaiya School of Engineering</p>
+    </footer>
+  </div>
+</body>
+</html>
