@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experiment 1 - HTML5 Web Portal Writeup</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #1f2a1f;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.5;
+      font-size: 13.5px;
+    }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px 35px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border: 1px solid #dcdcdc;
+    }
+    .header-banner {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .header-banner img {
+      max-width: 100%;
+      height: auto;
+    }
+    table.meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+    table.meta-table td {
+      border: 1px solid #555;
+      padding: 6px 10px;
+    }
+    .label-col {
+      font-weight: bold;
+      color: #800000;
+      width: 20%;
+      background: #fbfbfb;
+    }
+    .val-col {
+      width: 30%;
+    }
+    .exp-title-box {
+      text-align: center;
+      margin: 15px 0 10px;
+    }
+    .exp-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #800000;
+      display: inline-block;
+      border-bottom: 1px solid #800000;
+      padding-bottom: 3px;
+    }
+    .section-box {
+      border: 1px solid #777;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      background-color: #fafafa;
+      border-radius: 4px;
+    }
+    .section-box.blue-tint {
+      background-color: #f4f8fb;
+      border-color: #b2c9d8;
+    }
+    .section-title {
+      font-weight: bold;
+      color: #800000;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13.5px;
+    }
+    pre {
+      background: #f4f6f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 11.5px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 6px 0 0;
+      color: #1a331a;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .screenshot-card {
+      margin: 18px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .screenshot-card .caption {
+      background: #f0f5ee;
+      padding: 8px 12px;
+      font-weight: bold;
+      color: #1b4332;
+      border-bottom: 1px solid #d4dfd2;
+      font-size: 13px;
+    }
+    .screenshot-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="header-banner">
+      <img src="../images/somaiya_header.png" alt="Somaiya Vidyavihar University">
+    </div>
+
+    <table class="meta-table">
+      <tr>
+        <td class="label-col">Exp. No:</td>
+        <td class="val-col">1</td>
+        <td class="label-col">Roll No:</td>
+        <td class="val-col">16010125138</td>
+      </tr>
+      <tr>
+        <td class="label-col">Name:</td>
+        <td class="val-col">Pranav Mendon</td>
+        <td class="label-col">Batch:</td>
+        <td class="val-col">B3</td>
+      </tr>
+      <tr>
+        <td class="label-col">Branch:</td>
+        <td class="val-col">Computer Engineering</td>
+        <td class="label-col">Semester:</td>
+        <td class="val-col">IV</td>
+      </tr>
+      <tr>
+        <td class="label-col">Subject:</td>
+        <td class="val-col">Web Development Lab</td>
+        <td class="label-col">Date of Perf:</td>
+        <td class="val-col">15 / 07 / 2026</td>
+      </tr>
+    </table>
+
+    <div class="exp-title-box">
+      <div class="exp-title">Design and Development of an AI-based Smart Irrigation Advisory Web Portal Front-End using HTML5</div>
+    </div>
+
+    
+    <div class="section-box">
+      <span class="section-title">Aim of the Experiment:</span>
+      To design and develop a multi-page, use-case-based web portal front-end using HTML5 for an AI-based Smart Irrigation Advisory System for sugarcane crops (KJS-AGR-01), incorporating semantic structure, lists, text formatting, multimedia, interactive client-side image maps, responsive tables, and forms.
+    </div>
+
+    <div class="section-box">
+      <span class="section-title">Objectives of the Experiment:</span>
+      1. To develop structured and semantic HTML5 web pages for an AI-enabled smart irrigation advisory system.<br>
+      2. To create interactive web pages for farmer registration, irrigation recommendations, and weather forecast display.<br>
+      3. To apply real-world agricultural IoT use case telemetry as the core theme across all modular pages.<br>
+      4. To implement HTML5 lists, tables, image maps, forms, and multimedia elements without external libraries.<br>
+      5. To build a robust, accessible foundation ready for subsequent CSS3 styling and JavaScript validation layers.
+    </div>
+
+    <div class="section-box">
+      <span class="section-title">COs to be achieved:</span>
+      CO1: Developing webpages using HTML and CSS.
+    </div>
+
+    <div class="section-box">
+      <span class="section-title">Books / Journals / Websites references:</span>
+      1. MDN Web Docs – HTML: HyperText Markup Language, Mozilla Developer Network, 2026.<br>
+      2. W3Schools – HTML5 Tutorial and Semantic Web Guide, Refsnes Data, 2026.<br>
+      3. J. Duckett, HTML and CSS: Design and Build Websites, 1st ed., Indianapolis, IN: John Wiley & Sons, 2011.
+    </div>
+
+    <div class="section-box">
+      <span class="section-title">Theory / Relevant Concepts:</span>
+      HyperText Markup Language 5 (HTML5) is the core standard for structuring and presenting content on the World Wide Web. HTML5 introduces semantic tags that provide explicit meaning to both browsers and search engines, superseding legacy generic 'div' elements.<br><br>
+      Key HTML5 Modules Used in This Portal:<br>
+      • <strong>Semantic Structural Elements:</strong> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, and &lt;footer&gt; delineate the layout hierarchy.<br>
+      • <strong>Lists:</strong> Ordered lists (&lt;ol&gt;), unordered lists (&lt;ul&gt;), and definition lists (&lt;dl&gt;) organize sensor workflows and agricultural abbreviations.<br>
+      • <strong>Tables:</strong> &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, with rowspan and colspan attributes present multi-zone moisture thresholds.<br>
+      • <strong>Client-Side Image Maps:</strong> &lt;map&gt; and &lt;area&gt; tags enable coordinate-based navigation on farm plots.<br>
+      • <strong>Forms:</strong> Input controls enclosed within &lt;fieldset&gt; and &lt;legend&gt; enable structured farmer data acquisition.<br>
+      • <strong>Multimedia &amp; Iframes:</strong> Native &lt;video&gt;, &lt;audio&gt;, and &lt;iframe&gt; deliver awareness media and GIS radar telemetry.
+    </div>
+
+    <div class="page-break"></div>
+    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Expected Output / Screenshots (Task-Wise):</h3>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 1: Semantic Homepage Portal Structure (index.html)</div>
+      <img src="../screenshots/exp1_task1_homepage.png" alt="Task 1 Homepage Structure">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 2: Farm Information Displayed using Ordered, Unordered &amp; Definition Lists (farm-information.html)</div>
+      <img src="../screenshots/exp1_task2_lists.png" alt="Task 2 Lists">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 3: Irrigation Advisory Page using HTML Formatting &amp; Abbreviation Tags (irrigation-advisory.html)</div>
+      <img src="../screenshots/exp1_task3_formatting.png" alt="Task 3 Formatting Tags">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 4: Farm Gallery using Semantic Figure, Image &amp; Figcaption Elements</div>
+      <img src="../screenshots/exp1_task4_gallery.png" alt="Task 4 Farm Gallery">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 5: Interactive Farm Plot Navigation using Client-Side Image Map (&lt;map&gt; &amp; &lt;area&gt;) (farm-map.html)</div>
+      <img src="../screenshots/exp1_task5_imagemap.png" alt="Task 5 Farm Map">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 6: Soil Moisture &amp; Irrigation Quota Table (Thead, Tbody, Rowspan &amp; Colspan) (recommendation.html)</div>
+      <img src="../screenshots/exp1_task6_table.png" alt="Task 6 Table">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 7: Farmer Registration Form with Semantic Controls &amp; Fieldsets (registration.html)</div>
+      <img src="../screenshots/exp1_task7_form.png" alt="Task 7 Form">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 8: Display Weather Forecast &amp; Georeferenced Radar using IFrame (media.html)</div>
+      <img src="../screenshots/exp1_task8_iframe.png" alt="Task 8 Iframe">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 9: Multimedia &amp; Executable Awareness Content (Native HTML5 Audio &amp; Video) (media.html)</div>
+      <img src="../screenshots/exp1_task9_media.png" alt="Task 9 Media">
+    </div>
+
+    <div class="section-box blue-tint">
+      <span class="section-title">Post Lab Subjective/Objective type Questions:</span>
+      <p><strong>1. Explain the importance of semantic elements in HTML5 compared to traditional div tags.</strong><br>
+      Semantic elements (&lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt;) clearly communicate their role to browsers, search engines, and screen readers. Generic &lt;div&gt; tags convey no contextual meaning, making accessibility parsing and SEO ranking significantly harder.</p>
+      <p><strong>2. How does a client-side image map function?</strong><br>
+      An &lt;img&gt; references a &lt;map&gt; via <code>usemap="#name"</code>. Inside the map, &lt;area&gt; elements define geometric zones (rect, circle, poly) with coordinate bounds (<code>coords="..."</code>) and target hyperlinks. Clicks within these bounds route directly to the specified destination.</p>
+    </div>
+
+    <div class="section-box">
+      <span class="section-title">Conclusion and Discussion:</span>
+      <p>Experiment 1 established the clean structural and semantic foundation of the AI-based Smart Irrigation Advisory Portal using pure HTML5. Multi-page navigation, domain lists, coordinate-based image mapping, tables with span attributes, structured input forms, and multimedia content were all successfully verified.</p>
+    </div>
+
+  </div>
+</body>
+</html>

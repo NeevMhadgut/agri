@@ -173,11 +173,16 @@ def generate_exp2():
     r.font.size = Pt(13)
     r.font.color.rgb = RGBColor(128, 0, 0)
 
-    add_screenshot(doc, "Task 1 & 2: Inline Header and Internal Navigation Bar", "screenshots/exp2_task1_inline_header.png")
-    add_screenshot(doc, "Task 3, 9 & 10: Complete Page Layout, Left Sidebar, Glowing Alert, and Overview", "screenshots/exp2_homepage_overview.png")
-    add_screenshot(doc, "Task 4, 5 & 6: Categories Sidebar, Box Model Advisory Cards, and Image Gallery", "screenshots/exp2_task4_sidebar_cards.png")
-    add_screenshot(doc, "Task 7: Styled Irrigation Schedule Table with Zebra-Striping Rows", "screenshots/exp2_task7_table.png")
-    add_screenshot(doc, "Task 8: Styled Farmer Registration Form with Fieldsets & Form Controls", "screenshots/exp2_task8_form.png")
+    add_screenshot(doc, "Task 1: Style Homepage Header (Inline CSS)", "screenshots/exp2_task1_inline_header.png")
+    add_screenshot(doc, "Task 2: Internal CSS for Navigation Menu (<style> tag)", "screenshots/exp2_task2_internal_nav.png")
+    add_screenshot(doc, "Task 3: External CSS for Whole Website Theme (style.css)", "screenshots/exp2_task3_external_theme.png")
+    add_screenshot(doc, "Task 4: Style Crop Categories Sidebar with Hover Accents", "screenshots/exp2_task4_sidebar.png")
+    add_screenshot(doc, "Task 5: Advisory Card Layout Using CSS Box Model (Padding, Border, Shadow)", "screenshots/exp2_task5_boxmodel_cards.png")
+    add_screenshot(doc, "Task 6: Precision Agriculture Image Gallery with Hover Zoom Scale", "screenshots/exp2_task6_gallery_hover.png")
+    add_screenshot(doc, "Task 7: Styled Irrigation Schedule Table with Zebra-Striping (:nth-child(even))", "screenshots/exp2_task7_table.png")
+    add_screenshot(doc, "Task 8: Styled Farmer Registration Form with Focus Rings & Fieldsets", "screenshots/exp2_task8_form.png")
+    add_screenshot(doc, "Task 9: Page Layout Structure (Two-Column Flexbox/Grid)", "screenshots/exp2_task9_layout.png")
+    add_screenshot(doc, "Task 10: CSS Effects & Highlighting (Keyframed Glowing Alert Box)", "screenshots/exp2_task10_css_effects.png")
 
     # Post Lab Questions
     post_lab_q = (

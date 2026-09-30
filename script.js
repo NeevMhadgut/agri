@@ -400,4 +400,160 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Task 5: JavaScript Input Validation Suite
+  const runValSuiteBtn = document.getElementById("btnRunValidationSuite");
+  if (runValSuiteBtn) {
+    runValSuiteBtn.addEventListener("click", function () {
+      const name = document.getElementById("valTestName").value.trim();
+      const mobile = document.getElementById("valTestMobile").value.trim();
+      const plotId = document.getElementById("valTestPlotId").value.trim().toUpperCase();
+      const moisture = parseFloat(document.getElementById("valTestMoisture").value);
+
+      const isNameValid = /^[A-Za-z\s]+$/.test(name) && name.length > 0;
+      const isMobileValid = /^[6-9]\d{9}$/.test(mobile);
+      const isPlotValid = /^AGR-\d{4}$/.test(plotId);
+      const isMoistureValid = !isNaN(moisture) && moisture >= 0 && moisture <= 100;
+
+      const outBox = document.getElementById("validationSuiteOutput");
+      if (outBox) {
+        outBox.innerHTML = `
+          <div class="card" style="background:#f8fafc; border:1px solid #cbd5e1;">
+            <h4 style="color:#0f172a; margin-top:0;">Task 5: JavaScript Validation Test Suite Results</h4>
+            <table class="data-table" style="font-size:0.88rem; width:100%;">
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Input Value</th>
+                  <th>Rule Specification</th>
+                  <th>Validation Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Farmer Name</td>
+                  <td><code>${name || "(empty)"}</code></td>
+                  <td>Alphabetic characters &amp; spaces only (/^[A-Za-z\\s]+$/)</td>
+                  <td>${isNameValid ? '<span class="status-pill status-approved">PASS - Valid</span>' : '<span class="status-pill status-hold">FAIL - Invalid</span>'}</td>
+                </tr>
+                <tr>
+                  <td>Mobile Number</td>
+                  <td><code>${mobile || "(empty)"}</code></td>
+                  <td>10 digits starting with 6-9 (/^[6-9]\\d{9}$/)</td>
+                  <td>${isMobileValid ? '<span class="status-pill status-approved">PASS - Valid</span>' : '<span class="status-pill status-hold">FAIL - Invalid</span>'}</td>
+                </tr>
+                <tr>
+                  <td>Plot ID</td>
+                  <td><code>${plotId || "(empty)"}</code></td>
+                  <td>Format AGR-#### (/^AGR-\\d{4}$/)</td>
+                  <td>${isPlotValid ? '<span class="status-pill status-approved">PASS - Valid</span>' : '<span class="status-pill status-hold">FAIL - Invalid</span>'}</td>
+                </tr>
+                <tr>
+                  <td>Soil Moisture</td>
+                  <td><code>${isNaN(moisture) ? "(NaN)" : moisture + "%"}</code></td>
+                  <td>Numeric range between 0% and 100%</td>
+                  <td>${isMoistureValid ? '<span class="status-pill status-approved">PASS - Valid</span>' : '<span class="status-pill status-hold">FAIL - Invalid</span>'}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    });
+  }
+
+  // Task 6: Interactive Advisory Request & Registration Form
+  const exp5Form = document.getElementById("exp5RequestForm");
+  if (exp5Form) {
+    exp5Form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nameField = document.getElementById("reqFarmerName");
+      const mobileField = document.getElementById("reqMobile");
+      const plotField = document.getElementById("reqPlotId");
+      const moistureField = document.getElementById("reqMoisture");
+      const stageField = document.getElementById("reqCropStage");
+      const dateField = document.getElementById("reqDate");
+
+      const nameVal = nameField.value.trim();
+      const mobileVal = mobileField.value.trim();
+      const plotVal = plotField.value.trim().toUpperCase();
+      plotField.value = plotVal;
+      const moistureVal = parseFloat(moistureField.value);
+      const stageVal = stageField.value;
+      const dateVal = dateField.value;
+
+      let valid = true;
+      if (!/^[A-Za-z\s]+$/.test(nameVal)) {
+        document.getElementById("reqFarmerNameErr").textContent = "Name must be letters & spaces only.";
+        nameField.classList.add("is-invalid");
+        valid = false;
+      } else {
+        document.getElementById("reqFarmerNameErr").textContent = "";
+        nameField.classList.remove("is-invalid");
+        nameField.classList.add("is-valid");
+      }
+
+      if (!/^[6-9]\d{9}$/.test(mobileVal)) {
+        document.getElementById("reqMobileErr").textContent = "Must be 10 digits starting with 6-9.";
+        mobileField.classList.add("is-invalid");
+        valid = false;
+      } else {
+        document.getElementById("reqMobileErr").textContent = "";
+        mobileField.classList.remove("is-invalid");
+        mobileField.classList.add("is-valid");
+      }
+
+      if (!/^AGR-\d{4}$/.test(plotVal)) {
+        document.getElementById("reqPlotIdErr").textContent = "Plot ID must follow format AGR-####.";
+        plotField.classList.add("is-invalid");
+        valid = false;
+      } else {
+        document.getElementById("reqPlotIdErr").textContent = "";
+        plotField.classList.remove("is-invalid");
+        plotField.classList.add("is-valid");
+      }
+
+      if (isNaN(moistureVal) || moistureVal < 0 || moistureVal > 100) {
+        document.getElementById("reqMoistureErr").textContent = "Moisture must be between 0 and 100.";
+        moistureField.classList.add("is-invalid");
+        valid = false;
+      } else {
+        document.getElementById("reqMoistureErr").textContent = "";
+        moistureField.classList.remove("is-invalid");
+        moistureField.classList.add("is-valid");
+      }
+
+      if (!dateVal) {
+        document.getElementById("reqDateErr").textContent = "Date is required.";
+        dateField.classList.add("is-invalid");
+        valid = false;
+      } else {
+        document.getElementById("reqDateErr").textContent = "";
+        dateField.classList.remove("is-invalid");
+        dateField.classList.add("is-valid");
+      }
+
+      if (!valid) return;
+
+      const successBox = document.getElementById("task6SuccessMsg");
+      if (successBox) {
+        successBox.innerHTML = `<strong>Advisory Request Submitted Successfully!</strong><br>Record generated for Farmer <strong>${nameVal}</strong> (Plot: <strong>${plotVal}</strong>) on ${dateVal}.`;
+        successBox.style.display = "block";
+      }
+
+      const outBox = document.getElementById("exp5RequestOutput");
+      if (outBox) {
+        const quotaMins = moistureVal < 30 ? 45 : (moistureVal < 45 ? 25 : 0);
+        outBox.innerHTML = `
+          <div class="card" style="background:#f0fdf4; border:1px solid #86efac; margin-top:1rem;">
+            <h4 style="color:#166534; margin-top:0;">Task 6 Generated Advisory Decision</h4>
+            <p><strong>Farmer:</strong> ${nameVal} | <strong>Mobile:</strong> ${mobileVal} | <strong>Plot:</strong> ${plotVal}</p>
+            <p><strong>Stage:</strong> ${stageVal} | <strong>Telemetry Moisture:</strong> ${moistureVal}%</p>
+            <p><strong>Recommended Action:</strong> ${quotaMins > 0 ? `<span class="status-pill status-hold">Irrigate ${quotaMins} minutes via drip</span>` : '<span class="status-pill status-approved">Adequate soil moisture - No irrigation needed today</span>'}</p>
+          </div>
+        `;
+      }
+    });
+  }
 });

@@ -56,221 +56,174 @@
       text-align: center;
       margin: 15px 0 10px;
     }
-    .exp-no {
-      font-size: 18px;
+    .exp-title {
+      font-size: 16px;
       font-weight: bold;
-      color: #b30000;
-      margin-bottom: 6px;
-    }
-    .exp-title-card {
-      border: 1.5px solid #444;
-      background: #f8f9fa;
-      padding: 8px 14px;
-      font-weight: bold;
-      font-size: 15px;
-      text-align: left;
+      color: #800000;
+      display: inline-block;
+      border-bottom: 1px solid #800000;
+      padding-bottom: 3px;
     }
     .section-box {
-      border: 1px solid #666;
-      border-radius: 4px;
+      border: 1px solid #777;
       padding: 10px 14px;
       margin-bottom: 12px;
-      background: #fff;
-    }
-    .section-box.tinted {
-      background: #fbf9f4;
+      background-color: #fafafa;
+      border-radius: 4px;
     }
     .section-box.blue-tint {
-      background: #f3f7fa;
+      background-color: #f4f8fb;
+      border-color: #b2c9d8;
     }
     .section-title {
       font-weight: bold;
-      color: #990000;
-      font-size: 13.5px;
-      margin-bottom: 5px;
+      color: #800000;
       display: block;
-    }
-    ul, ol {
-      margin: 4px 0;
-      padding-left: 22px;
-    }
-    li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      font-size: 13.5px;
     }
     pre {
-      background: #f4f6f8;
-      border: 1px solid #d0d7de;
-      padding: 12px;
-      border-radius: 6px;
-      font-family: "SF Mono", Monaco, Consolas, monospace;
+      background: #f4f6f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: "JetBrains Mono", Consolas, monospace;
       font-size: 11.5px;
-      overflow-x: auto;
       white-space: pre-wrap;
       word-break: break-all;
-      line-height: 1.45;
+      margin: 6px 0 0;
+      color: #1a331a;
+      max-height: 400px;
+      overflow-y: auto;
     }
     .screenshot-card {
       margin: 18px 0;
-      text-align: center;
-      page-break-inside: avoid;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .screenshot-card .caption {
+      background: #f0f5ee;
+      padding: 8px 12px;
+      font-weight: bold;
+      color: #1b4332;
+      border-bottom: 1px solid #d4dfd2;
+      font-size: 13px;
     }
     .screenshot-card img {
-      max-width: 100%;
+      display: block;
+      width: 100%;
       height: auto;
-      border: 1.5px solid #2d6a4f;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-    .caption {
-      font-weight: bold;
-      font-size: 12.5px;
-      color: #800000;
-      margin-top: 6px;
     }
     .page-break {
-      page-break-after: always;
-      height: 20px;
-    }
-    @media print {
-      body { background: none; padding: 0; }
-      .sheet { border: none; box-shadow: none; padding: 0; max-width: 100%; }
-      .page-break { page-break-after: always; height: 0; }
+      page-break-before: always;
+      margin-top: 25px;
     }
   </style>
 </head>
 <body>
   <div class="sheet">
     <div class="header-banner">
-      <img src="../images/somaiya_header.png" alt="Somaiya Header">
+      <img src="../images/somaiya_header.png" alt="Somaiya Vidyavihar University">
     </div>
 
     <table class="meta-table">
       <tr>
-        <td class="label-col">Course Name:</td>
-        <td class="val-col">Web Development Laboratory (316U01L306)</td>
-        <td class="label-col">Semester:</td>
-        <td class="val-col">III</td>
-      </tr>
-      <tr>
-        <td class="label-col">Date of Performance:</td>
-        <td class="val-col">05 / 08 / 2026</td>
-        <td class="label-col">DIV / Batch No:</td>
-        <td class="val-col">B - 3</td>
-      </tr>
-      <tr>
-        <td class="label-col">Student Name:</td>
-        <td class="val-col">Pranav Mendon</td>
+        <td class="label-col">Exp. No:</td>
+        <td class="val-col">3</td>
         <td class="label-col">Roll No:</td>
         <td class="val-col">16010125138</td>
+      </tr>
+      <tr>
+        <td class="label-col">Name:</td>
+        <td class="val-col">Pranav Mendon</td>
+        <td class="label-col">Batch:</td>
+        <td class="val-col">B3</td>
+      </tr>
+      <tr>
+        <td class="label-col">Branch:</td>
+        <td class="val-col">Computer Engineering</td>
+        <td class="label-col">Semester:</td>
+        <td class="val-col">IV</td>
+      </tr>
+      <tr>
+        <td class="label-col">Subject:</td>
+        <td class="val-col">Web Development Lab</td>
+        <td class="label-col">Date of Perf:</td>
+        <td class="val-col">05 / 08 / 2026</td>
       </tr>
     </table>
 
     <div class="exp-title-box">
-      <div class="exp-no">Experiment No: 3</div>
-      <div class="exp-title-card">
-        <span style="color: #990000;">Title:</span> To implement a Version Control System using Git and GitHub for managing, tracking, and sharing the website files developed in Experiments 1 and 2.
-      </div>
+      <div class="exp-title">Version Control using Git and GitHub.</div>
     </div>
 
     
     <div class="section-box">
       <span class="section-title">Aim of the Experiment:</span>
-      Implementation of Version Control System (Git & GitHub) for managing, tracking, and sharing the website files developed in Experiments 1 and 2 for the Smart Irrigation Advisory Portal.
+      To understand and implement distributed version control concepts, repository management, branching, commit histories, remote collaboration, and synchronization using Git and GitHub for the AI-based Smart Irrigation Advisory Web Portal.
     </div>
 
     <div class="section-box">
-      <span class="section-title">Objectives for the Experiment:</span>
-      <ol>
-        <li>Understand the concept and importance of version control in modern web development.</li>
-        <li>Install and configure Git and create a local Git repository.</li>
-        <li>Track website files using working directory, staging area, and local repository.</li>
-        <li>Use essential Git commands: init, status, add, commit, log, diff, branch, remote, push, pull, clone.</li>
-        <li>Create and manage a remote repository on GitHub.</li>
-        <li>Upload Experiment 1 and 2 files to GitHub using meaningful commits.</li>
-        <li>Demonstrate synchronization between a local repository and GitHub.</li>
-      </ol>
+      <span class="section-title">Objectives of the Experiment:</span>
+      1. To create, initialize, and configure a local Git repository for the web portal project.<br>
+      2. To stage files, record descriptive commits, and track repository history.<br>
+      3. To link the local repository to GitHub, push changes, and manage remote tracking.<br>
+      4. To understand repository cloning, branch management, and collaborative synchronization.
     </div>
 
     <div class="section-box">
       <span class="section-title">COs to be achieved:</span>
-      CO1: Developing webpages using HTML and CSS.
-    </div>
-
-    <div class="section-box">
-      <span class="section-title">Books/ Journals/ Websites references:</span>
-      <ol>
-        <li>Git Documentation: https://git-scm.com/docs</li>
-        <li>GitHub Documentation: https://docs.github.com/</li>
-        <li>Git Exercises: https://gitexercises.fracz.com/</li>
-      </ol>
-    </div>
-
-    <div class="section-box">
-      <span class="section-title">Theory:</span>
-      <p><strong>Version Control:</strong> A system that records changes to a file or set of files over time so that specific versions can be recalled later.</p>
-      <p><strong>Git:</strong> A distributed version control system where every user has a complete local repository with full history, enabling offline branching, cryptographic commit hashing, and fast operations.</p>
-      <p><strong>Basic Git Workflow:</strong> Working Directory &rarr; Staging Area &rarr; Local Repository &rarr; Remote Repository (GitHub).</p>
-      <p><strong>Core Commands:</strong> <code>git init</code>, <code>git status</code>, <code>git add</code>, <code>git commit</code>, <code>git log</code>, <code>git diff</code>, <code>git branch</code>, <code>git remote</code>, <code>git push</code>, <code>git pull</code>, <code>git clone</code>.</p>
-    </div>
-
-    <div class="section-box tinted">
-      <span class="section-title">Problem statement:</span>
-      Upload and maintain the website files developed for Experiments 1 and 2 of the assigned case studies using Git and GitHub. Students must demonstrate a complete version-control workflow by creating meaningful commits, pushing the project to GitHub, cloning the repository, making a change, pushing the change, and retrieving it using git pull. All tasks are compulsory.
-    </div>
-
-    <div class="page-break"></div>
-
-    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Commands & Console Execution Log:</h3>
-
-    <div class="section-box">
-      <span class="section-title">Task 1 to 8: Complete Git Terminal Transcript</span>
-      <pre># 1. Verification and User Configuration
-$ git --version
-git version 2.39.5 (Apple Git-154)
-
-$ git config --global user.name "Pranav Mendon"
-$ git config --global user.email "pranav.mendon@somaiya.edu"
-$ git config --list | grep user
-user.name=Pranav Mendon
-user.email=pranav.mendon@somaiya.edu
-
-# 2. Local Repository Initialization
-$ cd /Users/pranavmendon/Documents/code/wdl_lab/agri
-$ git init
-Initialized empty Git repository in /Users/pranavmendon/Documents/code/wdl_lab/agri/.git/
-
-# 3. Staging and Initial Commit
-$ git add .
-$ git commit -m "Initial case study website - Smart Irrigation Advisory Portal"
-[main (root-commit) c152fc4] Initial case study website - Smart Irrigation Advisory Portal
- 24 files changed, 2908 insertions(+)
-
-# 4. Modification and Second Commit
-$ git diff index.html
-$ git commit -am "Updated homepage metadata and responsive styling"
-[main cef659c] Updated homepage metadata and responsive styling
-
-# 5. Remote Linking & Push
-$ git remote add origin https://github.com/pranavmendon/smart-agriculture_B3.git
-$ git branch -M main
-$ git push -u origin main
-Branch 'main' set up to track remote branch 'main' from 'origin'.
-
-# 6. Cloning & Synchronization
-$ git clone https://github.com/pranavmendon/smart-agriculture_B3.git agri_clone
-$ cd agri_clone && git commit -am "Updated content via clone" && git push
-$ cd ../agri && git pull origin main
-Fast-forward | 1 file changed, 1 insertion(+)</pre>
+      CO1: Version control workflow and web development lifecycle.
     </div>
 
     <div class="section-box blue-tint">
       <span class="section-title">GitHub Repository URL:</span>
-      <strong>https://github.com/pranavmendon/smart-agriculture_B3.git</strong>
+      <strong>https://github.com/pranavmendon/smart-irrigation-advisory.git</strong>
+    </div>
+
+    <div class="page-break"></div>
+    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Expected Output / Screenshots (Task-Wise):</h3>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 1: GitHub Account Setup &amp; SSH/HTTPS Authentication Verification</div>
+      <img src="../screenshots/exp3_task1_github_account.png" alt="Task 1 GitHub Account">
     </div>
 
     <div class="screenshot-card">
-      <div class="caption">Git Terminal Session Execution: Git config, status, commits, log, and remote push</div>
-      <img src="../screenshots/exp3_git_workflow.png" alt="Git Terminal Session">
+      <div class="caption">Task 2: Install and Configure Git (Version &amp; User Credentials)</div>
+      <img src="../screenshots/exp3_task2_git_config.png" alt="Task 2 Git Config">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 3: Prepare Project Workspace &amp; Initialize Local Git Repository</div>
+      <img src="../screenshots/exp3_task3_git_init.png" alt="Task 3 Git Init">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 4: Stage Portal Files and Create Initial Commit</div>
+      <img src="../screenshots/exp3_task4_initial_commit.png" alt="Task 4 Initial Commit">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 5: Modify Advisory Portal Code and Create Second Commit</div>
+      <img src="../screenshots/exp3_task5_second_commit.png" alt="Task 5 Second Commit">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 6: Connect Local Repository to Remote GitHub Origin</div>
+      <img src="../screenshots/exp3_task6_remote_add.png" alt="Task 6 Remote Add">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 7: Push Local Branch to GitHub Remote Repository</div>
+      <img src="../screenshots/exp3_task7_git_push.png" alt="Task 7 Git Push">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 8: Verify Git Synchronization and Commit History Tree</div>
+      <img src="../screenshots/exp3_task8_git_log_sync.png" alt="Task 8 Git Log Sync">
     </div>
 
     <div class="section-box blue-tint">
@@ -283,12 +236,7 @@ Fast-forward | 1 file changed, 1 insertion(+)</pre>
     <div class="section-box">
       <span class="section-title">Conclusion and Discussion:</span>
       <p>The experiment provided hands-on mastery over distributed version control workflows using Git and GitHub. Understanding the relationship between the working directory, index, and commit history clarified how software teams safely collaborate, track feature changes, and synchronize distributed repositories.</p>
-      <p><strong>Peer feedback:</strong><br>
-      1. Rohan Sharma (16010125140): "The commit history is clean, and the commit messages clearly communicate the incremental additions to the codebase."<br>
-      2. Ananya Verma (16010125142): "Demonstrating synchronization with a secondary cloned repository helped clearly illustrate how collaborative Git teams operate."<br>
-      3. Aditya Kulkarni (16010125145): "The repository structure is well organized and all HTML, CSS, and JS files track without merge artifacts."</p>
     </div>
-
 
   </div>
 </body>

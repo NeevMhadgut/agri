@@ -56,139 +56,122 @@
       text-align: center;
       margin: 15px 0 10px;
     }
-    .exp-no {
-      font-size: 18px;
+    .exp-title {
+      font-size: 16px;
       font-weight: bold;
-      color: #b30000;
-      margin-bottom: 6px;
-    }
-    .exp-title-card {
-      border: 1.5px solid #444;
-      background: #f8f9fa;
-      padding: 8px 14px;
-      font-weight: bold;
-      font-size: 15px;
-      text-align: left;
+      color: #800000;
+      display: inline-block;
+      border-bottom: 1px solid #800000;
+      padding-bottom: 3px;
     }
     .section-box {
-      border: 1px solid #666;
-      border-radius: 4px;
+      border: 1px solid #777;
       padding: 10px 14px;
       margin-bottom: 12px;
-      background: #fff;
-    }
-    .section-box.tinted {
-      background: #fbf9f4;
+      background-color: #fafafa;
+      border-radius: 4px;
     }
     .section-box.blue-tint {
-      background: #f3f7fa;
+      background-color: #f4f8fb;
+      border-color: #b2c9d8;
     }
     .section-title {
       font-weight: bold;
-      color: #990000;
-      font-size: 13.5px;
-      margin-bottom: 5px;
+      color: #800000;
       display: block;
-    }
-    ul, ol {
-      margin: 4px 0;
-      padding-left: 22px;
-    }
-    li {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
+      font-size: 13.5px;
     }
     pre {
-      background: #f4f6f8;
-      border: 1px solid #d0d7de;
-      padding: 12px;
-      border-radius: 6px;
-      font-family: "SF Mono", Monaco, Consolas, monospace;
+      background: #f4f6f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: "JetBrains Mono", Consolas, monospace;
       font-size: 11.5px;
-      overflow-x: auto;
       white-space: pre-wrap;
       word-break: break-all;
-      line-height: 1.45;
+      margin: 6px 0 0;
+      color: #1a331a;
+      max-height: 400px;
+      overflow-y: auto;
     }
     .screenshot-card {
       margin: 18px 0;
-      text-align: center;
-      page-break-inside: avoid;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .screenshot-card .caption {
+      background: #f0f5ee;
+      padding: 8px 12px;
+      font-weight: bold;
+      color: #1b4332;
+      border-bottom: 1px solid #d4dfd2;
+      font-size: 13px;
     }
     .screenshot-card img {
-      max-width: 100%;
+      display: block;
+      width: 100%;
       height: auto;
-      border: 1.5px solid #2d6a4f;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-    .caption {
-      font-weight: bold;
-      font-size: 12.5px;
-      color: #800000;
-      margin-top: 6px;
     }
     .page-break {
-      page-break-after: always;
-      height: 20px;
-    }
-    @media print {
-      body { background: none; padding: 0; }
-      .sheet { border: none; box-shadow: none; padding: 0; max-width: 100%; }
-      .page-break { page-break-after: always; height: 0; }
+      page-break-before: always;
+      margin-top: 25px;
     }
   </style>
 </head>
 <body>
   <div class="sheet">
     <div class="header-banner">
-      <img src="../images/somaiya_header.png" alt="Somaiya Header">
+      <img src="../images/somaiya_header.png" alt="Somaiya Vidyavihar University">
     </div>
 
     <table class="meta-table">
       <tr>
-        <td class="label-col">Course Name:</td>
-        <td class="val-col">Web Development Laboratory (316U01L306)</td>
-        <td class="label-col">Semester:</td>
-        <td class="val-col">III</td>
-      </tr>
-      <tr>
-        <td class="label-col">Date of Performance:</td>
-        <td class="val-col">19 / 08 / 2026</td>
-        <td class="label-col">DIV / Batch No:</td>
-        <td class="val-col">B - 3</td>
-      </tr>
-      <tr>
-        <td class="label-col">Student Name:</td>
-        <td class="val-col">Pranav Mendon</td>
+        <td class="label-col">Exp. No:</td>
+        <td class="val-col">5</td>
         <td class="label-col">Roll No:</td>
         <td class="val-col">16010125138</td>
+      </tr>
+      <tr>
+        <td class="label-col">Name:</td>
+        <td class="val-col">Pranav Mendon</td>
+        <td class="label-col">Batch:</td>
+        <td class="val-col">B3</td>
+      </tr>
+      <tr>
+        <td class="label-col">Branch:</td>
+        <td class="val-col">Computer Engineering</td>
+        <td class="label-col">Semester:</td>
+        <td class="val-col">IV</td>
+      </tr>
+      <tr>
+        <td class="label-col">Subject:</td>
+        <td class="val-col">Web Development Lab</td>
+        <td class="label-col">Date of Perf:</td>
+        <td class="val-col">19 / 08 / 2026</td>
       </tr>
     </table>
 
     <div class="exp-title-box">
-      <div class="exp-no">Experiment No: 5</div>
-      <div class="exp-title-card">
-        <span style="color: #990000;">Title:</span> JavaScript Programming for Smart Irrigation Advisory Web Portal.
-      </div>
+      <div class="exp-title">JavaScript Programming for Smart Irrigation Advisory Web Portal.</div>
     </div>
 
     
     <div class="section-box">
       <span class="section-title">Aim of the Experiment:</span>
-      To develop JavaScript programs for a Smart Irrigation Advisory Web Portal that processes soil moisture, crop, weather, and irrigation information and provides irrigation recommendations using JavaScript concepts such as values, variables, operators, expressions, control statements, object-oriented JavaScript, functions, arrays, strings, and regular expressions.
+      To develop and execute client-side JavaScript programs demonstrating core language features including variables, operators, decision-making control statements, object-oriented encapsulation, and array algorithms applied to an AI-based Smart Irrigation Advisory System for sugarcane crops (KJS-AGR-01).
     </div>
 
     <div class="section-box">
-      <span class="section-title">Objectives for the Experiment:</span>
-      <ol>
-        <li>To use JavaScript variables, values, operators, and expressions for processing irrigation-related information.</li>
-        <li>To apply control statements for determining irrigation requirements.</li>
-        <li>To create JavaScript objects representing farmer, farm, and irrigation information.</li>
-        <li>To use functions for calculating irrigation requirements and generating recommendations.</li>
-        <li>To use arrays for storing and analyzing soil-moisture and weather readings.</li>
-        <li>To use strings and regular expressions for validating farmer and farm information.</li>
-        <li>To integrate JavaScript with HTML forms for a Smart Irrigation Advisory Web Portal.</li>
-      </ol>
+      <span class="section-title">Objectives:</span>
+      1. Implement arithmetic operators and variables to calculate soil moisture deficits and irrigation water volume quotas.<br>
+      2. Implement multi-factor conditional statements (if-else) to formulate agronomic irrigation recommendations.<br>
+      3. Create a JavaScript object representing a sugarcane farm with attributes and member methods.<br>
+      4. Process 24-hour time-series telemetry sensor data using array methods.<br>
+      5. Construct input validation suites and interactive advisory request forms.
     </div>
 
     <div class="section-box">
@@ -196,463 +179,43 @@
       CO1: Developing webpages using HTML, CSS and JavaScript.
     </div>
 
-    <div class="section-box">
-      <span class="section-title">Books/ Journals/ Websites references:</span>
-      <ol>
-        <li>MDN Web Docs – JavaScript Guide, Objects, Arrays, and Functions.</li>
-        <li>W3Schools – JavaScript Reference.</li>
-        <li>D. Crockford, JavaScript: The Good Parts, O'Reilly Media, 2008.</li>
-      </ol>
-    </div>
-
-    <div class="section-box">
-      <span class="section-title">Theory:</span>
-      <p>JavaScript empowers web applications with programmatic data processing and decision making. Key paradigms applied to the irrigation portal include:</p>
-      <p><strong>1. Arithmetic Operations & Deficit Calculation:</strong> Telemetry values are parsed with <code>parseFloat()</code> and compared to required crop field capacities.</p>
-      <p><strong>2. Decision Control Logic:</strong> Multi-branch decision rules evaluate soil moisture in conjunction with weather forecasts:
-      <br>• Soil moisture &lt; 30%: <em>Irrigation Required Immediately</em>
-      <br>• Soil moisture between 30% and 50%: <em>Monitor Soil Moisture</em>
-      <br>• Rain expected: <em>Postpone Irrigation</em>
-      <br>• Soil moisture &gt; 50%: <em>Irrigation Not Required</em></p>
-      <p><strong>3. Object-Oriented Modeling:</strong> Farm instances encapsulate plot attributes and methods (<code>displayFarmInfo()</code>) to dynamically render structured telemetry cards.</p>
-      <p><strong>4. Array Operations:</strong> Hourly sensor readings are processed using <code>Math.min()</code>, <code>Math.max()</code>, and <code>reduce()</code> to compute daily irrigation statistics and detect wilting thresholds.</p>
-    </div>
-
     <div class="page-break"></div>
-
-    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Code Implementation:</h3>
-
-    <div class="section-box">
-      <span class="section-title">Tasks 1-5: JavaScript Advisory & Telemetry Engine (script.js)</span>
-      <pre>/* =========================================================
-   script.js - JavaScript Programming & Form Validation
-   Use Case: Smart Irrigation Advisory Web Portal (KJS-AGR-01)
-   Covers Experiments 4 & 5
-   ========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-  // =========================================================
-  // EXPERIMENT 4: Form Validation Implementation
-  // =========================================================
-  const regForm = document.getElementById("farmerRegistrationForm");
-  const successBox = document.getElementById("formSuccessMsg");
-
-  if (regForm) {
-    // Individual field validation functions
-    function validateFarmerName() {
-      const field = document.getElementById("farmerName");
-      const err = document.getElementById("farmerNameError");
-      const val = field.value.trim();
-      const nameRegex = /^[A-Za-z\s]+$/;
-
-      if (val === "") {
-        setError(field, err, "Farmer Name is required and cannot be blank.");
-        return false;
-      } else if (!nameRegex.test(val)) {
-        setError(field, err, "Farmer Name must contain alphabetic characters and spaces only.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateMobile() {
-      const field = document.getElementById("mobileNumber");
-      const err = document.getElementById("mobileNumberError");
-      const val = field.value.trim();
-      const mobileRegex = /^[6-9]\d{9}$/;
-
-      if (val === "") {
-        setError(field, err, "Mobile Number is required.");
-        return false;
-      } else if (!mobileRegex.test(val)) {
-        setError(field, err, "Mobile Number must be exactly 10 digits starting with 6-9.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateEmail() {
-      const field = document.getElementById("email");
-      const err = document.getElementById("emailError");
-      const val = field.value.trim();
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (val === "") {
-        setError(field, err, "Email Address is required.");
-        return false;
-      } else if (!emailRegex.test(val)) {
-        setError(field, err, "Enter a valid email format (e.g., farmer@example.com).");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validatePlotId() {
-      const field = document.getElementById("plotId");
-      const err = document.getElementById("plotIdError");
-      const val = field.value.trim().toUpperCase();
-      field.value = val;
-      const plotRegex = /^AGR-\d{4}$/;
-
-      if (val === "") {
-        setError(field, err, "Plot ID is required.");
-        return false;
-      } else if (!plotRegex.test(val)) {
-        setError(field, err, "Plot ID must follow format AGR-1234.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateVillage() {
-      const field = document.getElementById("village");
-      const err = document.getElementById("villageError");
-      const val = field.value.trim();
-
-      if (val === "") {
-        setError(field, err, "Village name is required.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateDropdown(fieldId, errorId, fieldName) {
-      const field = document.getElementById(fieldId);
-      const err = document.getElementById(errorId);
-      if (!field.value || field.value === "") {
-        setError(field, err, `Please select a valid ${fieldName}.`);
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateMoisture() {
-      const field = document.getElementById("soilMoisture");
-      const err = document.getElementById("soilMoistureError");
-      const val = parseFloat(field.value);
-
-      if (isNaN(val) || field.value.trim() === "") {
-        setError(field, err, "Soil Moisture is required.");
-        return false;
-      } else if (val < 0 || val > 100) {
-        setError(field, err, "Soil Moisture must be between 0% and 100%.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    function validateRegistrationDate() {
-      const field = document.getElementById("registrationDate");
-      const err = document.getElementById("registrationDateError");
-      const val = field.value;
-
-      if (!val) {
-        setError(field, err, "Registration Date is required.");
-        return false;
-      }
-      const selectedDate = new Date(val);
-      const today = new Date();
-      today.setHours(23, 59, 59, 999);
-
-      if (selectedDate > today) {
-        setError(field, err, "Registration Date cannot be a future date.");
-        return false;
-      }
-      clearError(field, err);
-      return true;
-    }
-
-    // Helpers
-    function setError(field, errElement, message) {
-      field.classList.add("is-invalid");
-      field.classList.remove("is-valid");
-      if (errElement) errElement.textContent = message;
-    }
-
-    function clearError(field, errElement) {
-      field.classList.remove("is-invalid");
-      field.classList.add("is-valid");
-      if (errElement) errElement.textContent = "";
-    }
-
-    // Attach blur event listeners for real-time validation feedback
-    document.getElementById("farmerName").addEventListener("blur", validateFarmerName);
-    document.getElementById("mobileNumber").addEventListener("blur", validateMobile);
-    document.getElementById("email").addEventListener("blur", validateEmail);
-    document.getElementById("plotId").addEventListener("blur", validatePlotId);
-    document.getElementById("village").addEventListener("blur", validateVillage);
-    document.getElementById("soilMoisture").addEventListener("blur", validateMoisture);
-    document.getElementById("registrationDate").addEventListener("blur", validateRegistrationDate);
-    document.getElementById("cropStage").addEventListener("change", () => validateDropdown("cropStage", "cropStageError", "Crop Stage"));
-    document.getElementById("soilType").addEventListener("change", () => validateDropdown("soilType", "soilTypeError", "Soil Type"));
-    document.getElementById("irrigationMethod").addEventListener("change", () => validateDropdown("irrigationMethod", "irrigationMethodError", "Irrigation Method"));
-
-    // Form Submit Event Handling
-    regForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const isNameValid = validateFarmerName();
-      const isMobileValid = validateMobile();
-      const isEmailValid = validateEmail();
-      const isPlotValid = validatePlotId();
-      const isVillageValid = validateVillage();
-      const isCropValid = validateDropdown("cropStage", "cropStageError", "Crop Stage");
-      const isSoilValid = validateDropdown("soilType", "soilTypeError", "Soil Type");
-      const isMethodValid = validateDropdown("irrigationMethod", "irrigationMethodError", "Irrigation Method");
-      const isMoistureValid = validateMoisture();
-      const isDateValid = validateRegistrationDate();
-
-      const formIsValid = isNameValid && isMobileValid && isEmailValid && isPlotValid &&
-                          isVillageValid && isCropValid && isSoilValid && isMethodValid &&
-                          isMoistureValid && isDateValid;
-
-      if (!formIsValid) {
-        if (successBox) successBox.style.display = "none";
-        alert("Please correct the highlighted errors before submitting the form.");
-        return;
-      }
-
-      // Success
-      if (successBox) {
-        const farmerName = document.getElementById("farmerName").value.trim();
-        const plotId = document.getElementById("plotId").value.trim();
-        successBox.innerHTML = `<strong>Registration Successful!</strong> Farmer <em>${farmerName}</em> with Plot ID <em>${plotId}</em> has been registered in the Smart Irrigation Advisory Portal.`;
-        successBox.style.display = "block";
-        successBox.scrollIntoView({ behavior: "smooth" });
-      } else {
-        alert("Registration Successful!");
-      }
-    });
-
-    // Reset button handler
-    regForm.addEventListener("reset", function () {
-      setTimeout(() => {
-        const inputs = regForm.querySelectorAll("input, select");
-        inputs.forEach(el => {
-          el.classList.remove("is-valid", "is-invalid");
-        });
-        const errs = regForm.querySelectorAll(".error-msg");
-        errs.forEach(err => err.textContent = "");
-        if (successBox) successBox.style.display = "none";
-      }, 50);
-    });
-  }
-
-  // =========================================================
-  // EXPERIMENT 5: JavaScript Programming Modules
-  // =========================================================
-
-  // Task 1: Soil Moisture Deficit Calculator
-  const calcBtn = document.getElementById("btnCalcMoisture");
-  if (calcBtn) {
-    calcBtn.addEventListener("click", function () {
-      const farmerName = document.getElementById("calcFarmerName").value.trim() || "Ramesh Patil";
-      const plotId = document.getElementById("calcPlotId").value.trim() || "AGR-1024";
-      const currentMoisture = parseFloat(document.getElementById("calcCurrentMoisture").value);
-      const requiredMoisture = parseFloat(document.getElementById("calcRequiredMoisture").value);
-
-      if (isNaN(currentMoisture) || isNaN(requiredMoisture)) {
-        alert("Please enter valid numeric moisture levels.");
-        return;
-      }
-
-      const deficit = requiredMoisture - currentMoisture;
-      let statusMsg = "";
-      if (deficit > 0) {
-        // Approximate 25 liters per 1% deficit per square meter
-        const waterPerSqM = (deficit * 0.8).toFixed(1);
-        statusMsg = `Farmer: ${farmerName} | Plot: ${plotId}\n` +
-                    `Current Moisture: ${currentMoisture}%\n` +
-                    `Target Moisture: ${requiredMoisture}%\n` +
-                    `Moisture Deficit: ${deficit.toFixed(1)}%\n` +
-                    `Water Required: ~${waterPerSqM} liters/m² to restore root-zone field capacity.`;
-      } else {
-        statusMsg = `Farmer: ${farmerName} | Plot: ${plotId}\n` +
-                    `Current Moisture: ${currentMoisture}%\n` +
-                    `Target Moisture: ${requiredMoisture}%\n` +
-                    `No moisture deficit detected. Soil is sufficiently hydrated.`;
-      }
-
-      // Display alert()
-      alert("Irrigation Advisory Status:\n" + statusMsg);
-
-      // Display in DOM
-      const outBox = document.getElementById("calcMoistureOutput");
-      if (outBox) {
-        outBox.innerHTML = `<div class="card" style="background:#e8f5e9; border:1px solid #74c69d;">
-          <h4 style="margin:0 0 0.5rem; color:#1b4332;">Task 1 Result: Moisture Deficit Calculation</h4>
-          <p><strong>Farmer:</strong> ${farmerName} | <strong>Plot ID:</strong> ${plotId}</p>
-          <p><strong>Current Soil Moisture:</strong> ${currentMoisture}% | <strong>Required Moisture:</strong> ${requiredMoisture}%</p>
-          <p><strong>Moisture Deficit:</strong> ${deficit > 0 ? deficit.toFixed(1) + '%' : '0% (Optimal)'}</p>
-          <p><strong>Status:</strong> ${deficit > 0 ? '<span style="color:#d90429; font-weight:bold;">Deficit Alert: Irrigation Recommended</span>' : '<span style="color:#2b9348; font-weight:bold;">Adequate Hydration</span>'}</p>
-        </div>`;
-      }
-    });
-  }
-
-  // Task 2: Rule-Based Recommendation Engine
-  const evalRuleBtn = document.getElementById("btnEvalRules");
-  if (evalRuleBtn) {
-    evalRuleBtn.addEventListener("click", function () {
-      const soilMoisture = parseFloat(document.getElementById("ruleSoilMoisture").value);
-      const rainExpected = document.getElementById("ruleRainForecast").value === "yes";
-      const cropStage = document.getElementById("ruleCropStage").value;
-
-      if (isNaN(soilMoisture)) {
-        alert("Please enter a valid soil moisture percentage.");
-        return;
-      }
-
-      let recommendation = "";
-      let alertClass = "";
-
-      if (rainExpected) {
-        recommendation = "Postpone Irrigation (Rain expected in weather forecast)";
-        alertClass = "status-hold";
-      } else if (soilMoisture < 30) {
-        recommendation = "Irrigation Required Immediately";
-        alertClass = "status-hold";
-      } else if (soilMoisture >= 30 && soilMoisture <= 50) {
-        recommendation = "Monitor Soil Moisture";
-        alertClass = "status-monitor";
-      } else {
-        recommendation = "Irrigation Not Required";
-        alertClass = "status-approved";
-      }
-
-      const outBox = document.getElementById("ruleOutput");
-      if (outBox) {
-        outBox.innerHTML = `<div class="card" style="margin-top:1rem; border-left:4px solid #2d6a4f;">
-          <h4 style="margin:0 0 0.5rem;">Task 2 Result: Advisory Recommendation</h4>
-          <p><strong>Input Parameters:</strong> Soil Moisture = ${soilMoisture}%, Rain Forecast = ${rainExpected ? "Rain Expected" : "Clear Weather"}, Crop Stage = ${cropStage}</p>
-          <p><strong>Advisory Action:</strong> <span class="status-pill ${alertClass}">${recommendation}</span></p>
-        </div>`;
-      }
-    });
-  }
-
-  // Task 3: Sugarcane Farm Object
-  const farmObjBtn = document.getElementById("btnFarmObject");
-  if (farmObjBtn) {
-    farmObjBtn.addEventListener("click", function () {
-      const sugarcaneFarm = {
-        farmerName: "Sanjay More",
-        plotId: "AGR-3052",
-        cropStage: "Grand Growth",
-        soilMoisture: 26.5,
-        area: "4.5 Acres",
-        pumpStatus: "Active",
-        displayFarmInfo: function () {
-          return `
-            <div class="card" style="background:#f4f9f4; border:1px solid #95d5b2;">
-              <h4 style="color:#1b4332; margin-top:0;">Sugarcane Farm Object Record</h4>
-              <ul style="list-style:none; padding-left:0; margin:0;">
-                <li><strong>Farmer Name:</strong> ${this.farmerName}</li>
-                <li><strong>Plot ID:</strong> ${this.plotId}</li>
-                <li><strong>Crop Stage:</strong> ${this.cropStage}</li>
-                <li><strong>Soil Moisture:</strong> ${this.soilMoisture}%</li>
-                <li><strong>Farm Area:</strong> ${this.area}</li>
-                <li><strong>Irrigation Pump Status:</strong> <span class="badge ${this.pumpStatus === 'Active' ? 'urgent' : ''}">${this.pumpStatus}</span></li>
-              </ul>
-            </div>
-          `;
-        }
-      };
-
-      const outBox = document.getElementById("farmObjectOutput");
-      if (outBox) {
-        outBox.innerHTML = sugarcaneFarm.displayFarmInfo();
-      }
-    });
-  }
-
-  // Task 4: Hourly Sensor Readings Analysis with Arrays
-  const sensorArrayBtn = document.getElementById("btnAnalyzeSensors");
-  if (sensorArrayBtn) {
-    sensorArrayBtn.addEventListener("click", function () {
-      // 24-hour moisture readings from smart field sensor
-      const sensorReadings = [38, 35, 33, 30, 28, 27, 26, 25, 29, 32, 34, 36, 35, 33, 31, 29, 28, 27, 26, 25, 24, 28, 31, 35];
-
-      // 1. All readings
-      const allReadingsStr = sensorReadings.join("%, ") + "%";
-
-      // 2. Minimum
-      const minMoisture = Math.min(...sensorReadings);
-
-      // 3. Maximum
-      const maxMoisture = Math.max(...sensorReadings);
-
-      // 4. Average
-      const sum = sensorReadings.reduce((acc, curr) => acc + curr, 0);
-      const avgMoisture = (sum / sensorReadings.length).toFixed(2);
-
-      // 5. Readings below critical value (critical = 30%)
-      const criticalThreshold = 30;
-      const criticalCount = sensorReadings.filter(val => val < criticalThreshold).length;
-
-      const outBox = document.getElementById("sensorArrayOutput");
-      if (outBox) {
-        outBox.innerHTML = `
-          <div class="card" style="background:#ffffff; border:1px solid #d8ddd4;">
-            <h4 style="color:#1b4332; margin-top:0;">Task 4: Hourly Soil Moisture Sensor Array Analysis</h4>
-            <p><strong>1. Hourly Readings (24 Hours):</strong><br><small style="word-break:break-all; color:#374151;">${allReadingsStr}</small></p>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; margin-top:1rem;">
-              <div style="padding:0.75rem; background:#f0fdf4; border-radius:6px; border:1px solid #bbf7d0;">
-                <div style="font-size:0.8rem; color:#166534; font-weight:600;">MINIMUM MOISTURE</div>
-                <div style="font-size:1.4rem; font-weight:700; color:#15803d;">${minMoisture}%</div>
-              </div>
-              <div style="padding:0.75rem; background:#eff6ff; border-radius:6px; border:1px solid #bfdbfe;">
-                <div style="font-size:0.8rem; color:#1e40af; font-weight:600;">MAXIMUM MOISTURE</div>
-                <div style="font-size:1.4rem; font-weight:700; color:#1d4ed8;">${maxMoisture}%</div>
-              </div>
-              <div style="padding:0.75rem; background:#fefce8; border-radius:6px; border:1px solid #fef08a;">
-                <div style="font-size:0.8rem; color:#854d0e; font-weight:600;">AVERAGE MOISTURE</div>
-                <div style="font-size:1.4rem; font-weight:700; color:#a16207;">${avgMoisture}%</div>
-              </div>
-              <div style="padding:0.75rem; background:#fef2f2; border-radius:6px; border:1px solid #fecaca;">
-                <div style="font-size:0.8rem; color:#991b1b; font-weight:600;">CRITICAL READINGS (<30%)</div>
-                <div style="font-size:1.4rem; font-weight:700; color:#b91c1c;">${criticalCount} hours</div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-    });
-  }
-});
-</pre>
-    </div>
-
-    <div class="page-break"></div>
-
-    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Expected Output / Screenshots:</h3>
+    <h3 style="color: #990000; border-bottom: 2px solid #990000; padding-bottom: 4px;">Expected Output / Screenshots (Task-Wise):</h3>
 
     <div class="screenshot-card">
-      <div class="caption">Overview of Smart JavaScript Advisory Portal Interface (smart-advisory.html)</div>
-      <img src="../screenshots/exp5_smart_engine.png" alt="Smart Advisory Engine">
+      <div class="caption">Task 1: Soil Moisture Deficit &amp; Water Requirement Calculation</div>
+      <img src="../screenshots/exp5_task1_deficit_calc.png" alt="Task 1 Deficit Calc">
     </div>
 
     <div class="screenshot-card">
-      <div class="caption">Execution Outputs: Moisture Deficit, Decision Rules, Sugarcane Farm Object, and 24-Hour Telemetry Array Statistics</div>
-      <img src="../screenshots/exp5_all_outputs.png" alt="All Task Outputs">
+      <div class="caption">Task 2: Multi-Factor Decision Rule Recommendation Engine</div>
+      <img src="../screenshots/exp5_task2_decision_rules.png" alt="Task 2 Decision Rules">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 3: Sugarcane Farm Object Representation &amp; displayFarmInfo()</div>
+      <img src="../screenshots/exp5_task3_farm_object.png" alt="Task 3 Farm Object">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 4: Hourly Sensor Telemetry Array Processing (Min, Max, Avg, Critical Hours)</div>
+      <img src="../screenshots/exp5_task4_array_telemetry.png" alt="Task 4 Array Telemetry">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 5: Client-Side Input Validation Test Suite Results</div>
+      <img src="../screenshots/exp5_task5_validation_suite.png" alt="Task 5 Validation Suite">
+    </div>
+
+    <div class="screenshot-card">
+      <div class="caption">Task 6: Interactive Advisory Request &amp; Registration Form Execution</div>
+      <img src="../screenshots/exp5_task6_interactive_form.png" alt="Task 6 Interactive Form">
     </div>
 
     <div class="section-box">
       <span class="section-title">Conclusion and Discussion:</span>
       <p>Experiment 5 demonstrated the implementation of core JavaScript language constructs in an agricultural decision-support context. By leveraging functions, control statements, objects, and array operations, the portal provides immediate, automated advice to sugarcane farmers, eliminating manual calculation errors.</p>
-      <p><strong>Peer feedback:</strong><br>
-      1. Rohan Sharma (16010125140): "The 24-hour telemetry array analysis with min, max, and average metric cards looks professional and very practical."<br>
-      2. Ananya Verma (16010125142): "The rainfall override rule is a smart agronomic addition that protects fields from waterlogging."<br>
-      3. Aditya Kulkarni (16010125145): "The farm object method makes rendering dynamic telemetry data clean and modular."</p>
     </div>
-
 
   </div>
 </body>

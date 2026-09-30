@@ -175,9 +175,10 @@ def generate_exp4():
     r.font.size = Pt(13)
     r.font.color.rgb = RGBColor(128, 0, 0)
 
-    add_screenshot(doc, "(1) Initial Farmer Registration Form", "screenshots/exp2_task8_form.png")
-    add_screenshot(doc, "(2) Form Validation Error Handling on Invalid/Blank Inputs", "screenshots/exp4_form_errors.png")
-    add_screenshot(doc, "(3) Successful Registration Feedback with Success Banner", "screenshots/exp4_form_success.png")
+    add_screenshot(doc, "Task 1: Create Farmer Registration Form (Initial Clean State)", "screenshots/exp4_task1_clean_form.png")
+    add_screenshot(doc, "Task 2: Validate Required Text Fields (Farmer Name & Plot ID Errors)", "screenshots/exp4_task2_text_errors.png")
+    add_screenshot(doc, "Task 3: Validate Mobile Number and Email Address via Regular Expressions", "screenshots/exp4_task3_mobile_email_errors.png")
+    add_screenshot(doc, "Task 4: Validate Selection/Date Fields & Dynamic Success Confirmation Banner", "screenshots/exp4_task4_form_success.png")
 
     # Conclusion & Discussion
     conc_text = (

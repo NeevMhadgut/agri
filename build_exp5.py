@@ -106,8 +106,12 @@ def generate_exp5():
     r.font.size = Pt(13)
     r.font.color.rgb = RGBColor(128, 0, 0)
 
-    add_screenshot(doc, "Overview of Interactive JavaScript Advisory Portal Engine", "screenshots/exp5_smart_engine.png")
-    add_screenshot(doc, "Tasks 1-4 Execution Outputs: Moisture Deficit, Decision Rules, Farm Object, Array Analysis", "screenshots/exp5_all_outputs.png")
+    add_screenshot(doc, "Task 1: Soil Moisture Deficit & Water Requirement Calculation", "screenshots/exp5_task1_deficit_calc.png")
+    add_screenshot(doc, "Task 2: Multi-Factor Decision Rule Recommendation Engine", "screenshots/exp5_task2_decision_rules.png")
+    add_screenshot(doc, "Task 3: Sugarcane Farm Object Representation & displayFarmInfo()", "screenshots/exp5_task3_farm_object.png")
+    add_screenshot(doc, "Task 4: Hourly Sensor Telemetry Array Processing (Min, Max, Avg, Critical Hours)", "screenshots/exp5_task4_array_telemetry.png")
+    add_screenshot(doc, "Task 5: Client-Side Input Validation Test Suite Results", "screenshots/exp5_task5_validation_suite.png")
+    add_screenshot(doc, "Task 6: Interactive Advisory Request & Registration Form Execution", "screenshots/exp5_task6_interactive_form.png")
 
     # Conclusion & Discussion
     conc_text = (

@@ -220,7 +220,14 @@ def generate_exp3():
     r.font.size = Pt(13)
     r.font.color.rgb = RGBColor(128, 0, 0)
 
-    add_screenshot(doc, "Git Terminal Workflow Execution (Config, Status, Commit History, Remote)", "screenshots/exp3_git_workflow.png")
+    add_screenshot(doc, "Task 1: GitHub Account Setup & SSH/HTTPS Authentication Verification", "screenshots/exp3_task1_github_account.png")
+    add_screenshot(doc, "Task 2: Install and Configure Git (Version & User Credentials)", "screenshots/exp3_task2_git_config.png")
+    add_screenshot(doc, "Task 3: Prepare Project Workspace & Initialize Local Git Repository", "screenshots/exp3_task3_git_init.png")
+    add_screenshot(doc, "Task 4: Stage Portal Files and Create Initial Commit", "screenshots/exp3_task4_initial_commit.png")
+    add_screenshot(doc, "Task 5: Modify Advisory Portal Code and Create Second Commit", "screenshots/exp3_task5_second_commit.png")
+    add_screenshot(doc, "Task 6: Connect Local Repository to Remote GitHub Origin", "screenshots/exp3_task6_remote_add.png")
+    add_screenshot(doc, "Task 7: Push Local Branch to GitHub Remote Repository", "screenshots/exp3_task7_git_push.png")
+    add_screenshot(doc, "Task 8: Verify Git Synchronization and Commit History Tree", "screenshots/exp3_task8_git_log_sync.png")
 
     # Post Lab Questions
     post_lab_q = (

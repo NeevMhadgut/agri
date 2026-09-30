@@ -131,6 +131,82 @@
         <button id="btnAnalyzeSensors" class="btn btn-submit">Run 24-Hour Telemetry Array Analysis</button>
         <div id="sensorArrayOutput" style="margin-top: 1rem;"></div>
       </section>
+
+      <!-- Task 5: JavaScript Input Validation Suite -->
+      <section class="js-panel" id="exp5-task5-panel">
+        <h3>Task 5: Client-Side Input Validation Functions</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Dedicated validation functions for Farmer Name (alphabetical + spaces), Mobile Number (10 digits starting with 6-9), and Plot ID (pattern AGR-####).</p>
+        <div class="grid-2col">
+          <div class="form-group">
+            <label for="valTestName">Test Farmer Name:</label>
+            <input type="text" id="valTestName" value="Pranav Mendon">
+          </div>
+          <div class="form-group">
+            <label for="valTestMobile">Test Mobile Number:</label>
+            <input type="tel" id="valTestMobile" value="9876543210">
+          </div>
+          <div class="form-group">
+            <label for="valTestPlotId">Test Plot ID:</label>
+            <input type="text" id="valTestPlotId" value="AGR-1024">
+          </div>
+          <div class="form-group">
+            <label for="valTestMoisture">Test Soil Moisture (%):</label>
+            <input type="number" id="valTestMoisture" value="28">
+          </div>
+        </div>
+        <button id="btnRunValidationSuite" class="btn btn-submit">Run JavaScript Validation Suite</button>
+        <div id="validationSuiteOutput" style="margin-top: 1rem;"></div>
+      </section>
+
+      <!-- Task 6: Interactive Advisory Request & Registration Form -->
+      <section class="js-panel" id="exp5-task6-panel">
+        <h3>Task 6: Interactive Advisory Request &amp; Registration Form</h3>
+        <p style="font-size: 0.9rem; color: #516151;">Complete HTML form utilizing semantic controls, DOM event handling, fieldsets, and automated advisory recommendation generation upon valid submission.</p>
+        <div id="task6SuccessMsg" class="alert-success" style="display:none; margin-bottom:1rem;"></div>
+        <form id="exp5RequestForm" novalidate>
+          <fieldset style="border: 1px solid #74c69d; border-radius: 6px; padding: 1rem; margin-bottom: 1rem;">
+            <legend style="font-weight: bold; color: #1b4332; padding: 0 0.5rem;">Irrigation Request Parameters</legend>
+            <div class="grid-2col">
+              <div class="form-group">
+                <label for="reqFarmerName">Farmer Name <span class="required-star">*</span></label>
+                <input type="text" id="reqFarmerName" value="Pranav Mendon">
+                <span class="error-msg" id="reqFarmerNameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="reqMobile">Mobile Number <span class="required-star">*</span></label>
+                <input type="tel" id="reqMobile" value="9823012345">
+                <span class="error-msg" id="reqMobileErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="reqPlotId">Plot ID <span class="required-star">*</span></label>
+                <input type="text" id="reqPlotId" value="AGR-2048">
+                <span class="error-msg" id="reqPlotIdErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="reqMoisture">Current Moisture (%) <span class="required-star">*</span></label>
+                <input type="number" id="reqMoisture" value="26" min="0" max="100">
+                <span class="error-msg" id="reqMoistureErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="reqCropStage">Crop Growth Stage <span class="required-star">*</span></label>
+                <select id="reqCropStage">
+                  <option value="Tillering" selected>Tillering Stage (Early)</option>
+                  <option value="Grand Growth">Grand Growth (Peak Water)</option>
+                  <option value="Ripening">Ripening Stage (Controlled)</option>
+                </select>
+                <span class="error-msg" id="reqCropStageErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="reqDate">Request / Irrigation Date <span class="required-star">*</span></label>
+                <input type="date" id="reqDate" value="2026-08-14">
+                <span class="error-msg" id="reqDateErr"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-submit" style="margin-top: 0.5rem;">Submit Irrigation Advisory Request</button>
+          </fieldset>
+        </form>
+        <div id="exp5RequestOutput"></div>
+      </section>
     </main>
 
     <footer class="site-footer">
